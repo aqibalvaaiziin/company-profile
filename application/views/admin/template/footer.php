@@ -8,6 +8,8 @@
     $(".menubar").click(function(){
       $("#sidebar").toggleClass('active');
       $(".cc").toggleClass("ccoff");
+      $(".short").toggleClass("cShort");
+      $(".normal").toggleClass("cNormal");
     });
   });
 </script>
