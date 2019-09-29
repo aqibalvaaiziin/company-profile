@@ -6,27 +6,26 @@
       <th scope="col" class="short">#</th>
       <th scope="col" class="normal">First</th>
       <th scope="col" class="normal">Last</th>
-      <th scope="col" class="normal">Handle</th>
+      <th scope="col" class="short">Action</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
+   
     <tr>
       <th scope="row">2</th>
       <td>Jacob</td>
       <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>
+        <a href="" class="btn btn-danger">
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        </a>
+        <a href="" class="btn btn-primary">
+          <i class="fa fa-eye" aria-hidden="true"></i>
+        </a>
+        <a href="" class="btn btn-warning">
+          <i class="fa fa-pen" aria-hidden="true"></i>
+        </a>
+      </td>
     </tr>
   </tbody>
 </table>

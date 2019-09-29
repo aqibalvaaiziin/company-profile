@@ -16,7 +16,7 @@
 			<div class="card-body p-0">
 				<ul class="nav d-flex flex-column">
 					<li class="nav-item">
-						<a href="" class="nav-link active text-white av">
+						<a href="<?= base_url().'admin/chart' ?>" class="nav-link active text-white av">
 							<i class="fa fa-chart-line" aria-hidden="true"></i> &nbsp;
 							<span> Chart </span>
 						</a>
@@ -34,7 +34,7 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="" class="nav-link active text-white">
+						<a href="<?= base_url().'admin/blog' ?>" class="nav-link active text-white">
 							<i class="fa fa-blog" aria-hidden="true"></i> &nbsp;
 							<span> Blog </span>
 						</a>

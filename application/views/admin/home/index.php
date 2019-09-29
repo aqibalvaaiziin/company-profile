@@ -6,7 +6,7 @@
       <th scope="col" class="short">#</th>
       <th scope="col" class="normal">First</th>
       <th scope="col" class="normal">Last</th>
-      <th scope="col" class="normal">Handle</th>
+      <th scope="col" class="short">Handle</th>
     </tr>
   </thead>
   <tbody>

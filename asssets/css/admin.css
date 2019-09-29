@@ -22,7 +22,7 @@
 	width: 2.1rem;
 	height: 5px;
 	margin: 5px 0px;
-	background-color: black;
+	background-color: #3A3A40;
 }
 
 .cc { 
@@ -57,7 +57,7 @@
 }
 
 .normal{
-	width: 28.2rem;
+	width: 34.8rem;
 	transition: all 600ms linear;
 }
 
@@ -66,5 +66,5 @@
 }
 
 .cNormal{
-	width:32.5rem;
+	width:38.7rem;
 }
