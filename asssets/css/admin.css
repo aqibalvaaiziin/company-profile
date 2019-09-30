@@ -51,20 +51,11 @@
 	background-color:  #ff6600;
 }
 
-.short{
-	width: 15rem;
+.tableSize{
+	width : 165%;
 	transition: all 600ms linear;
 }
 
-.normal{
-	width: 34.8rem;
-	transition: all 600ms linear;
-}
-
-.cShort{
-	width:20rem;
-}
-
-.cNormal{
-	width:38.7rem;
+.ctableSize{
+	width : 210%;
 }
