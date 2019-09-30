@@ -16,7 +16,7 @@
           <th scope="row">2</th>
           <td>Jacob</td>
           <td>Thornton</td>
-          <td>
+          <td class="text-right">
             <a href="" class="btn btn-danger">
               <i class="fa fa-trash" aria-hidden="true"></i>
             </a>

@@ -1,5 +1,5 @@
 <div class="cc">
-    <h1 class="mt-2 mb-3 font-weight-bold">Service</h1>
+    <h1 class="mt-2 mb-3 font-weight-bold">Pesanan</h1>
   <div class="tableSize">
     <table class="table" id="myTable">
       <thead class="thead-dark">

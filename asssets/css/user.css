@@ -1,7 +1,39 @@
-.top-nav{
+.bcontent{
+  position: relative;
+  min-height: 100vh;
+  padding: 35px 0 30px;
+}
+
+@media (max-width: 768px){
+  .bcontent{
+    position: relative;
+    min-height: 100vh;
+    padding: 35px 0 30px;
+  }
+}
+
+.navbar{
+  z-index: 10;
+}
+
+.navbar-light .navbar-brand{
+  font-size: 1.5rem;
+  font-family: 'Segoe UI';
+  margin-left: 5rem;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link{
+  margin-right: 4rem;
+  color: black;
+  font-size: 1rem;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover{
+  color: rgba(224, 24, 24, 0.973);
+}
+
+.carousel{
+  margin-top:-200px ;
   width: 100%;
-  height: 3rem;
-  background-color: black;
-  color:white;
-  position: fixed;
+  max-height: 200vh;
 }
