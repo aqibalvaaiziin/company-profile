@@ -39,10 +39,16 @@
 							<span> Blog </span>
 						</a>
 					</li>
+					<li class="nav-item">
+						<a href="<?= base_url().'user/home' ?>" class="nav-link active text-white av mt-5">
+							<i class="fas fa-arrow-alt-circle-left" aria-hidden="true"></i> &nbsp;
+							<span> Go To User </span>
+						</a>
+					</li>
 				</ul>
 			</div>
 			<div class="card-footer">
-				<h6>@ Copyright by lala Company</h6>
+				<h6 class="text-white">@ Copyright by lala Company</h6>
 			</div>
 		</div>
 	</div>
