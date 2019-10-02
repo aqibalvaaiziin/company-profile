@@ -45,19 +45,19 @@
 	left: 0;
 	right: 0;
 	font-family: "Pacifico", cursive;
-	color: rgba(0, 0, 0, 0.05);
-	color: #f7f5f6;
-	font-size: 120px;
+	color: #0000000d;
+	color: #dbd7d7;
+	font-size: 120px;		
 	z-index: -1;
 }
 
 .subHeading {
 	font-weight: 700;
-	font-size: 20px;
-	letter-spacing: 4px;
+	font-size: 1.8rem;
+	letter-spacing: 1rem;
   text-transform: uppercase;
   position: relative;
-  left: 44%;
+  left: 40%;
   margin-top: 1rem;
 	display: inline-block;
 }
