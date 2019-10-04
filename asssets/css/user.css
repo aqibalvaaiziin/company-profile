@@ -1,7 +1,35 @@
+@font-face{
+	font-family: 'Pacifico';
+	src: url('../fonts/pacifico/Pacifico.ttf');
+	font-size: normal;
+	font-weight: 600;
+}
+
+@font-face{
+	font-family: 'futura';
+	src: url('../fonts/futura/futura\ light\ bt.ttf');
+	font-style: normal;
+	font-weight: 200;
+}
+
+@font-face{
+	font-family: 'futura';
+	src : url('../fonts/futura/Futura\ Bold\ font.ttf');
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face{
+	font-family: 'futura';
+	src : url('../fonts/futura/futura\ medium\ bt.ttf');
+	font-style: normal;
+	font-weight: 200;
+}
+
 .bcontent {
 	position: relative;
 	min-height: 100vh;
-	padding: 5rem 0 3rem;
+	padding: 5rem 0 0 0;
 }
 
 @media (max-width: 768px) {
@@ -18,13 +46,16 @@
 
 .navbar-light .navbar-brand {
 	font-size: 1.5rem;
-	font-family: 'Segoe UI';
+	font-family: pacifico;
+	font-weight: 200;
 	margin-left: 5rem;
 }
 
 .navbar-light .navbar-nav .nav-item .nav-link {
 	margin-right: 4rem;
 	color: black;
+	font-family: futura;
+	font-weight: 200;
 	font-size: 1rem;
 }
 
@@ -44,20 +75,51 @@
 	top: -5rem;
 	left: 0;
 	right: 0;
-	font-family: "Pacifico", cursive;
+	font-family: Pacifico;
 	color: #0000000d;
-	color: #b1b0b0;
-	font-size: 120px;		
+	color: #cac5c5;
+	font-size: 100px;
 	z-index: -1;
+	font-weight: 600;
 }
 
 .subHeading {
 	font-weight: 700;
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	letter-spacing: 1rem;
-  text-transform: uppercase;
-  position: relative;
-  left: 40%;
-  margin-top: 1rem;
+	text-transform: uppercase;
+	position: relative;
+	left: 40%;
+	margin-top: 0.9rem;
 	display: inline-block;
+}
+
+.futura-head{
+	font-family: futura;
+	font-weight: 700;
+}
+
+.futura-content{
+	font-family: futura;
+	font-weight: 200;
+}
+
+.sc{
+	font-size: 13.5px;
+}
+
+.is{
+	font-size: 15.5px;
+}
+
+.pacifico{
+	font-family: Pacifico;
+	font-weight: 200;
+}
+
+.centered{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,50%);
 }

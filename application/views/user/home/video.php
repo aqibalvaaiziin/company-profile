@@ -1,11 +1,11 @@
-<div class="bcontent">
+<div class="bcontent" style="margin-top:-2rem">
     <div class="container">
     <!-- Grid row -->
-    <div class=" position-relative mt-md-5">
+    <div class=" position-relative mt-5">
         <h1 class="text-center big">About Us</h1>
         <h2 class="subHeading">About US</h2>
     </div>
-    <div class="row" style="margin-top:5rem">
+    <div class="row mt-4">
 <!-- Grid column -->
 <div class="col-lg-4 col-md-12 mb-4">
 
@@ -153,4 +153,3 @@
 </div>
 <!-- Grid row -->
     </div>
-</div>
