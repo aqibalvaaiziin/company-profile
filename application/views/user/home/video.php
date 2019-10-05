@@ -1,7 +1,6 @@
-<div class="bcontent" style="margin-top:-2rem">
-    <div class="container">
+<div class="sec text-center" style="margin-top:-2rem">
     <!-- Grid row -->
-    <div class=" position-relative mt-5">
+    <div class="position-relative mt-5">
         <h1 class="text-center big">About Us</h1>
         <h2 class="subHeading">About US</h2>
     </div>
@@ -48,7 +47,7 @@
   </div>
   <!--Modal: Name-->
 
-  <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" alt="video"
+  <a><img class="img-fluid z-depth-1" src="https://images.pexels.com/photos/2598721/pexels-photo-2598721.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="video"
       data-toggle="modal" data-target="#modal1"></a>
 
 </div>
@@ -96,7 +95,7 @@
   </div>
   <!--Modal: Name-->
 
-  <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-2.jpg" alt="video"
+  <a><img class="img-fluid z-depth-1" src="https://images.pexels.com/photos/2476645/pexels-photo-2476645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="video"
       data-toggle="modal" data-target="#modal6"></a>
 
 </div>
@@ -144,7 +143,7 @@
   </div>
   <!--Modal: Name-->
 
-  <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-3.jpg" alt="video"
+  <a><img class="img-fluid z-depth-1" src="https://images.pexels.com/photos/2344264/pexels-photo-2344264.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="video"
       data-toggle="modal" data-target="#modal4"></a>
 
 </div>
@@ -152,4 +151,5 @@
 
 </div>
 <!-- Grid row -->
+    </div>
     </div>

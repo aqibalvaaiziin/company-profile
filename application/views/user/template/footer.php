@@ -1,5 +1,5 @@
-<div class="bg-dark text-white p-5 position-relative mt-4 w-100" style="width:1364px;">
-	<div class="d-flex justify-content-around">
+<div class="sec bg-dark text-white mt-4">
+	<div class="d-flex justify-content-between">
 
 		<div class="w-25">
 			<h4 class="pacifico">Company</h4>
@@ -72,6 +72,7 @@
 
 <script src="<?= base_url().'/asssets/js/carousel.js' ?>"></script>
 <script src="<?= base_url().'/asssets/js/video.js' ?>"></script>
+<script src="<?= base_url().'/asssets/js/fixnav.js' ?>"></script>
 </body>
 
 </html>

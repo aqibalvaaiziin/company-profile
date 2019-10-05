@@ -1,47 +1,77 @@
-@font-face{
+@font-face {
 	font-family: 'Pacifico';
 	src: url('../fonts/pacifico/Pacifico.ttf');
 	font-size: normal;
 	font-weight: 600;
 }
 
-@font-face{
+@font-face {
 	font-family: 'futura';
 	src: url('../fonts/futura/futura\ light\ bt.ttf');
 	font-style: normal;
 	font-weight: 200;
 }
 
-@font-face{
+@font-face {
 	font-family: 'futura';
-	src : url('../fonts/futura/Futura\ Bold\ font.ttf');
+	src: url('../fonts/futura/Futura\ Bold\ font.ttf');
 	font-style: normal;
 	font-weight: 700;
 }
 
-@font-face{
+@font-face {
 	font-family: 'futura';
-	src : url('../fonts/futura/futura\ medium\ bt.ttf');
+	src: url('../fonts/futura/futura\ medium\ bt.ttf');
 	font-style: normal;
 	font-weight: 200;
 }
 
 .bcontent {
 	position: relative;
-	min-height: 100vh;
-	padding: 5rem 0 0 0;
+	width: 1366px;
+	height: auto;
 }
 
-@media (max-width: 768px) {
+@media screen  and (max-width: 1365px) {
 	.bcontent {
+		width: 100%;
 		position: relative;
-		min-height: 100vh;
-		padding: 35px 0 30px;
+	}
+
+	.big {
+		width: 100%;
 	}
 }
 
+@media screen  and (max-width: 766px) {
+	.sec{
+		width: 100%;
+	}
+	.navbar{
+		width:100%;
+		position: absolute;
+		top: 0;
+		z-index: 10;
+	}
+	
+}
+
 .navbar {
+	width: 1366px;
 	z-index: 10;
+	padding: 10px 0;
+	transition: all 200ms linear
+}
+
+.navDown{
+	z-index: 10;
+	background: #fff;
+}
+
+
+.nav-item{
+	font-weight: 800;
+	text-transform: uppercase;
 }
 
 .navbar-light .navbar-brand {
@@ -51,6 +81,8 @@
 	margin-left: 5rem;
 }
 
+
+
 .navbar-light .navbar-nav .nav-item .nav-link {
 	margin-right: 4rem;
 	color: black;
@@ -59,11 +91,32 @@
 	font-size: 1rem;
 }
 
+.navbar-light .navbar-toggler{
+	border:none;
+	color: #fff;
+	border: 2px solid #7f7f7f;
+	border-radius: 0;
+	outline: none;
+}
+
+
+
+.navbar-light .navbar-toggler .collapsed{
+	text-align: right;
+}
+
+.sec {
+	width: 1366px;
+	height: auto;
+	padding: 2rem 5rem;
+}
+
 
 .carousel {
 	margin-top: -200px;
-	width: 100%;
+	width: 1366px;
 	max-height: 200vh;
+	position: absolute;
 }
 
 .sr-only {
@@ -72,15 +125,15 @@
 
 .big {
 	position: absolute;
-	top: -5rem;
 	left: 0;
 	right: 0;
 	font-family: Pacifico;
 	color: #0000000d;
 	color: #cac5c5;
-	font-size: 100px;
+	font-size: 5rem;
 	z-index: -1;
 	font-weight: 600;
+	margin-top: -0.1rem;
 }
 
 .subHeading {
@@ -89,37 +142,41 @@
 	letter-spacing: 1rem;
 	text-transform: uppercase;
 	position: relative;
-	left: 40%;
-	margin-top: 0.9rem;
+	margin-top: 6rem;
 	display: inline-block;
 }
 
-.futura-head{
+.futura-head {
 	font-family: futura;
 	font-weight: 700;
 }
 
-.futura-content{
+.futura-content {
 	font-family: futura;
 	font-weight: 200;
 }
 
-.sc{
+.sc {
 	font-size: 13.5px;
 }
 
-.is{
+.is {
 	font-size: 15.5px;
 }
 
-.pacifico{
+.pacifico {
 	font-family: Pacifico;
 	font-weight: 200;
 }
 
-.centered{
+.centered {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	transform: translate(-50%,50%);
+	transform: translate(-50%, 50%);
+}
+
+.image img{
+	width: 350px;
+	height: 250px;
 }
