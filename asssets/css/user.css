@@ -41,6 +41,27 @@
 	.big {
 		width: 100%;
 	}
+	.modal {
+		width: 100%;
+		height: auto;
+	}
+	.modal-dialog{
+		width: 100%;
+	}
+	.modal-content{
+		width: 100%;
+	}
+	iframe{
+		width: 100%;
+	}
+	.modal .fade{
+		width: 100%;
+		height: auto;
+	}
+	.modal .show{
+		height: auto;
+		width: 100%;
+	}
 }
 
 @media screen  and (max-width: 766px) {
@@ -130,6 +151,7 @@
 .big {
 	position: absolute;
 	right: 0;
+	left: 0;
 	font-family: Pacifico;
 	color: #0000000d;
 	color: #cac5c5;
