@@ -1,4 +1,4 @@
-<div class="sec" data-aos="fade-down" style="padding:0">
+<div class="sec" data-aos="fade-down" style="padding:0" >
 	<h2 class="text-center futura-head">
 		ALL ABOUT HOTEL BOROBUDUR JAKARTA, INDONESIA
 	</h2>

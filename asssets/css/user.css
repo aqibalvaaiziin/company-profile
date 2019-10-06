@@ -53,7 +53,12 @@
 		top: 0;
 		z-index: 10;
 	}
-	
+	.big {
+		width: 100%;
+	}
+	.tC{
+		width: 100%;
+	}
 }
 
 .navbar {
@@ -124,7 +129,6 @@
 
 .big {
 	position: absolute;
-	left: 0;
 	right: 0;
 	font-family: Pacifico;
 	color: #0000000d;
@@ -132,7 +136,6 @@
 	font-size: 5rem;
 	z-index: -1;
 	font-weight: 600;
-	margin-top: -0.1rem;
 }
 
 .subHeading {
@@ -175,7 +178,21 @@
 	transform: translate(-50%, 50%);
 }
 
+.tC{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 .image img{
 	width: 350px;
 	height: 250px;
+}
+
+.modal-backdrop {
+	z-index: 1050;
+}
+
+.modal-content{
+	z-index: 1080;
 }

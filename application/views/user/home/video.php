@@ -1,10 +1,12 @@
-<div class="sec text-center" style="margin-top:5rem" data-aos="zoom-in">
+<div class="sec text-center" data-aos="zoom-in-up" style="margin-top:11rem">
+	<h1 class="text-center big tC">About Us</h1>
+	<h2 class="subHeading">ABOUT US</h2>
+</div>
+
+<div class="sec text-center">
 	<!-- Grid row -->
-	<div class="position-relative mt-5">
-		<h1 class="text-center big">About Us</h1>
-		<h2 class="subHeading">About US</h2>
-	</div>
-	<div class="row mt-4">
+	
+	<div class="row">
 		<!-- Grid column -->
 		<div class="col-lg-4 col-md-12 mb-4">
 
