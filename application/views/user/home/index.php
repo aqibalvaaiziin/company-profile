@@ -1,5 +1,5 @@
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-	<ol class="carousel-indicators">
+	<ol class="carousel-indicators c-ind" style="margin-top:8rem">
 		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
@@ -26,5 +26,3 @@
 	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
 	</a>
 </div>
-
-

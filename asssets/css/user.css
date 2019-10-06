@@ -99,12 +99,6 @@
 	outline: none;
 }
 
-
-
-.navbar-light .navbar-toggler .collapsed{
-	text-align: right;
-}
-
 .sec {
 	width: 1366px;
 	height: auto;
@@ -115,8 +109,13 @@
 .carousel {
 	margin-top: -200px;
 	width: 1366px;
-	max-height: 200vh;
+	height: 766px;
 	position: absolute;
+}
+.c-ind{
+	position: absolute;
+	top: 96.5%;
+	transform: translateY(-96.5%);
 }
 
 .sr-only {

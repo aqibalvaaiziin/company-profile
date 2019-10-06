@@ -1,4 +1,4 @@
-<div class="sec bg-dark text-white mt-4">
+<div class="sec bg-dark text-white mt-4" data-aos="fade-up">
 	<div class="d-flex justify-content-between">
 
 		<div class="w-25">
@@ -33,30 +33,33 @@
 		<div class="w-25">
 			<h4 class="futura-head">Have a Question</h4>
 			<div class="d-flex flex-row">
-                <div class="d-flex flex-column">
-                    <i class="fa fa-map-marker mb-5 mt-3 is" aria-hidden="true"></i>
-                    <i class="fab fa-whatsapp mb-4 is" aria-hidden="true"></i>
-                    <i class="far fa-envelope mb-5 is" aria-hidden="true"></i>
-                </div>
-                <div class="ml-2" style="margin-top:-4px">
-                    <p class="futura-content mt-3 sc">
-                    203 Fake St. Mountain View, San Francisco, California, USA
-                    </p>
-                    <p class="futura-content sc mt-4">	
-                        +62 392 3929 210
-                    </p>
-                    <p class="futura-contentsc mt-3">	
-                        info@yourdomain.com
-                    </p>
-                </div>
+				<div class="d-flex flex-column">
+					<i class="fa fa-map-marker mb-5 mt-3 is" aria-hidden="true"></i>
+					<i class="fab fa-whatsapp mb-4 is" aria-hidden="true"></i>
+					<i class="far fa-envelope mb-5 is" aria-hidden="true"></i>
+				</div>
+				<div class="ml-2" style="margin-top:-4px">
+					<p class="futura-content mt-3 sc">
+						203 Fake St. Mountain View, San Francisco, California, USA
+					</p>
+					<p class="futura-content sc mt-4">
+						+62 392 3929 210
+					</p>
+					<p class="futura-contentsc mt-3">
+						info@yourdomain.com
+					</p>
+				</div>
 			</div>
 
 		</div>
-    </div>
-    <br>
-    <p class="futura-head mt-5 mb-1 text-center">
-        &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i>
-    </p>
+	</div>
+	<br>
+	<p class="futura-head mt-5 mb-1 text-center">
+		&copy;<script>
+			document.write(new Date().getFullYear());
+
+		</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i>
+	</p>
 </div>
 
 
@@ -68,6 +71,28 @@
 </script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+	AOS.init();
+	AOS.init({
+		disable: false,
+		startEvent: 'DOMContentLoaded',
+		initClassName: 'aos-init',
+		animatedClassName: 'aos-animate',
+		useClassNames: false,
+		disableMutationObserver: false,
+		debounceDelay: 50,
+		throttleDelay: 99,
+		offset: 150,
+		delay: 0,
+		duration: 600,
+		easing: 'ease',
+		once: false,
+		mirror: false,
+		anchorPlacement: 'top-bottom',
+	});
+
 </script>
 
 <script src="<?= base_url().'/asssets/js/carousel.js' ?>"></script>
