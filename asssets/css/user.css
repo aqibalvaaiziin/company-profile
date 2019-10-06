@@ -26,58 +26,53 @@
 	font-weight: 200;
 }
 
-.bcontent {
-	position: relative;
-	width: 1366px;
-	height: auto;
-}
-
-@media screen  and (max-width: 1365px) {
-	.bcontent {
-		width: 100%;
-		position: relative;
-	}
-
+@media screen and (max-width: 1365px) {
 	.big {
 		width: 100%;
 	}
+
 	.modal {
 		width: 100%;
 		height: auto;
 	}
-	.modal-dialog{
+
+	.modal-dialog {
 		width: 100%;
 	}
-	.modal-content{
+
+	.modal-content {
 		width: 100%;
 	}
-	iframe{
+
+	iframe {
 		width: 100%;
 	}
-	.modal .fade{
+
+	.modal .fade {
 		width: 100%;
 		height: auto;
 	}
-	.modal .show{
+
+	.modal .show {
 		height: auto;
+		width: 100%;
+	}
+
+	.sec {
 		width: 100%;
 	}
 }
 
-@media screen  and (max-width: 766px) {
-	.sec{
+@media screen and (max-width: 766px) {
+
+	.navbar {
 		width: 100%;
-	}
-	.navbar{
-		width:100%;
 		position: absolute;
 		top: 0;
 		z-index: 10;
 	}
-	.big {
-		width: 100%;
-	}
-	.tC{
+
+	.tC {
 		width: 100%;
 	}
 }
@@ -89,13 +84,13 @@
 	transition: all 200ms linear
 }
 
-.navDown{
+.navDown {
 	z-index: 10;
 	background: #fff;
 }
 
 
-.nav-item{
+.nav-item {
 	font-weight: 800;
 	text-transform: uppercase;
 }
@@ -117,8 +112,8 @@
 	font-size: 1rem;
 }
 
-.navbar-light .navbar-toggler{
-	border:none;
+.navbar-light .navbar-toggler {
+	border: none;
 	color: #fff;
 	border: 2px solid #7f7f7f;
 	border-radius: 0;
@@ -138,7 +133,26 @@
 	height: 766px;
 	position: absolute;
 }
-.c-ind{
+
+
+.headImage {
+	width: 1366px;
+	height: 766px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.headImage img {
+	top: 0;
+	left: 0;
+	width: 1366px;
+	height: 766px;
+	z-index: -1;
+	position: absolute;
+}
+
+.c-ind {
 	position: absolute;
 	top: 96.5%;
 	transform: translateY(-96.5%);
@@ -200,21 +214,34 @@
 	transform: translate(-50%, 50%);
 }
 
-.tC{
+.tC {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 }
 
-.image img{
+.image img {
 	width: 350px;
 	height: 250px;
 }
 
-.modal-backdrop {
-	z-index: 1050;
+.newContent {
+	margin-top: 104vh;
 }
 
-.modal-content{
-	z-index: 1080;
+.headIndex {
+	z-index: 2;
+	position: absolute;
+	top: 70%;
+	left: 15%;
+}
+
+.imageLink {
+	text-decoration: none;
+	color: black;
+}
+
+.imageLink:hover {
+	text-decoration: none;
+	color: #353434;
 }

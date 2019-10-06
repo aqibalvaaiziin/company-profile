@@ -20,7 +20,7 @@
 	</p>
 </div>
 </div>
-<div class="sec bg-dark text-white position-relative mt-4" data-aos="fade-right">
+<div class="sec bg-dark text-white position-relative mt-4" data-aos="fade-down">
 
 	<div class="d-flex justify-content-around">
 		<div>

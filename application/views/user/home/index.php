@@ -17,7 +17,7 @@
 		</div>
 		<div class="carousel-item">
 			<img class="d-block w-100"
-				src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+				src="https://images.pexels.com/photos/189293/pexels-photo-189293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 				alt="Third slide">
 		</div>
 	</div>
