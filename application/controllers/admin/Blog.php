@@ -14,9 +14,10 @@
     
         public function index()
         {
+            $data['blogs'] = $this->blog_model->tampilData();
             $this->load->view('admin/template/header');
             $this->load->view('admin/template/bar');
-            $this->load->view('admin/blog/index');
+            $this->load->view('admin/blog/index',$data);
             $this->load->view('admin/template/footer');
         }
 
@@ -36,39 +37,42 @@
                     'upload_path'=>'./uploads',
                     'allowed_types'=>'jpg|png|jpeg',
                     'max_size'=>5086
+                );
+                    $this->load->library('upload',$config);
+                    $this->upload->do_upload('image');
+
+                    $finfo = $this->upload->data(
                     );
-                $this->load->library('upload', $config);
-                $this->upload->do_upload('image');
-                $finfo = $this->upload->data();
-                $image_name = $finfo['file_name'];
+                    $nama_foto = $finfo['file_name'];
 
-                $title = $this->input->post('title',true);
-                $desc = $this->input->post('desc',true);
-                $auth = $this->input->post('auth',true);
-                $view = $this->input->post('view',true);
+                    $title = $this->input->post('title');
+                    $desc = $this->input->post('desc');
+                    $date = $this->input->post('date');
+                    $auth = $this->input->post('author');
+                    $view = $this->input->post('view');
+                    
 
-                $data_blog = array(
-					'nama'=>$nama,
-					'title'=>$title,
-					'desc'=>$desc,
-                    'date'=>now(),
-                    'author'=>$auth,
-                    'view'=>$view,
-                    'image'=> $image_name
-                );
-                
-                $config = array(
-                    'source_image'=>'/asssets/uploads/'.$image_name,
-                    'image_library'=>'gd2',
-                    'new_image'=>'uploads/',
-                    'maintain_ratio'=>true,
-                    'width'=>150,
-                    'height'=>200
-                );
-                $this->load->library('image_lib',$config2);
-                $this->image_lib->resize();
-                $this->blog_model->tambahData($data_blog);
-                redirect('admin/blog','refresh');
+                    $dataBlog = array(
+                        'title'=>$title,
+                        'desc'=>$desc,
+                        'date'=>$date,
+                        'auth'=>$auth,	
+                        'view'=>$view,	
+                        'gambar'=>$nama_foto	
+                    );
+
+                    $config2 = array(
+                        'source_image'=>'uploads/'.$nama_foto,
+                        'image_library'=>'gd2',
+                        'new_image'=>'uploads/thumbnail',
+                        'maintain_ratio'=>true,
+                        'width'=>150,
+                        'height'=>200
+                    );
+                    $this->load->library('image_lib',$config2);
+                    $this->image_lib->resize();
+                    $this->blog_model->tambahData($dataBlog);
+                    redirect('admin/blog');
             }
             
         }

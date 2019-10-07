@@ -1,4 +1,4 @@
-<section class="sec headImage">
+<section class="sec headImage" data-aos="zoom-in-up">
 	<img src="https://images.pexels.com/photos/1595822/pexels-photo-1595822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 		alt="">
 	<div class="headIndex">
@@ -10,7 +10,7 @@
 	</div>
 </section>
 
-<section class="sec newContent d-flex flex-row justify-content-between justify-content-between">
+<section class="sec newContent d-flex flex-row justify-content-between justify-content-between" data-aos="fade-right">
 	<div class="blogC d-flex flex-row">
 		<div class="iblog">
 			<img src="https://images.pexels.com/photos/331107/pexels-photo-331107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"

@@ -25,8 +25,12 @@
                             <input type="number" class="form-control" id="view" name="view">
                         </div>
                         <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" class="form-control" id="date" name="date">
+                        </div>
+                        <div class="form-group">
                             <label for="image">Image</label>
-                            <input type="file" id="profile_image" name="profile_image" size="33" />
+                            <input type="file" class="form-control pt-3 pb-5 id="profile_image" name="image">
                         </div>
                         <input type="submit" value="Upload Image" class="btn btn-success float-right">
                         <?php echo form_close();?>

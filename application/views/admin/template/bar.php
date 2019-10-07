@@ -22,9 +22,15 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="<?= base_url().'admin/home' ?>" class="nav-link text-white">
+						<a href="<?= base_url().'admin/order' ?>" class="nav-link text-white">
 							<i class="fa fa-chalkboard-teacher" aria-hidden="true"></i> &nbsp;
-							<span> Pesanan </span>
+							<span> Order </span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="<?= base_url().'admin/room' ?>" class="nav-link active text-white">
+							<i class="fa fa-building" aria-hidden="true"></i> &nbsp;
+							<span> Room </span>
 						</a>
 					</li>
 					<li class="nav-item">

@@ -19,7 +19,7 @@
 
 <body>
 
-	<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light" data-aos="zoom-in-up">
 		<a class="navbar-brand" href="#">Company</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

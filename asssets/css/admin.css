@@ -61,3 +61,8 @@
 .ctableSize {
 	width: 127.3%;
 }
+
+.longTable{
+	width:200px;
+	overflow: hidden;
+}

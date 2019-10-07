@@ -11,18 +11,22 @@
       <thead class="thead-dark">
         <tr>
           <th scope="col">NAME</th>
-          <th scope="col">DESC</th>
+          <th scope="col">PEOPLE</th>
+          <th scope="col">TYPE</th>
+          <th scope="col">SERVICE</th>
           <th scope="col">PRICE</th>
           <th scope="col">ACTION</th>
         </tr>
       </thead>
     
       <tbody>
-        <?php foreach($services as $service): ?>
+        <?php foreach($rooms as $room): ?>
           <tr>
-            <td><?php echo $service->name; ?></td>
-            <td><?php echo str_word_count($service->desc) > 25 ? substr($service->desc,0,30)."[...]" : $service->desc ?></td>
-            <td><?php echo $service->price; ?></td>
+            <td><?php echo $room->name; ?></td>
+            <td><?php echo $room->people; ?></td>
+            <td><?php echo $room->type; ?></td>
+            <td><?php echo $room->service; ?></td>
+            <td><?php echo $room->price; ?></td>
             <td>
               <a href="" class="btn btn-danger">
                 <i class="fa fa-trash" aria-hidden="true"></i>

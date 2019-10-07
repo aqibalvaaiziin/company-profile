@@ -245,3 +245,8 @@
 	text-decoration: none;
 	color: #353434;
 }
+
+.img-fluid:hover{
+	background-color: #353434;
+	opacity: 0.5; 
+}

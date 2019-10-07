@@ -45,7 +45,7 @@
 					<p class="futura-content sc mt-4">
 						+62 392 3929 210
 					</p>
-					<p class="futura-contentsc mt-3">
+					<p class="futura-contentsc" style="margin-top:18px;">
 						info@yourdomain.com
 					</p>
 				</div>

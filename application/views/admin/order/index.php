@@ -10,19 +10,21 @@
     <table class="table" id="myTable">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">NAME</th>
-          <th scope="col">DESC</th>
-          <th scope="col">PRICE</th>
+          <th scope="col">ID_ROOM</th>
+          <th scope="col">DATE</th>
+          <th scope="col">ID_SERVICE</th>
+          <th scope="col">TOTAL</th>
           <th scope="col">ACTION</th>
         </tr>
       </thead>
     
       <tbody>
-        <?php foreach($services as $service): ?>
+        <?php foreach($orders as $order): ?>
           <tr>
-            <td><?php echo $service->name; ?></td>
-            <td><?php echo str_word_count($service->desc) > 25 ? substr($service->desc,0,30)."[...]" : $service->desc ?></td>
-            <td><?php echo $service->price; ?></td>
+            <td><?php echo $order->id_room; ?></td>
+            <td><?php echo $order->date; ?></td>
+            <td><?php echo $order->id_service; ?></td>
+            <td><?php echo $order->total; ?></td>
             <td>
               <a href="" class="btn btn-danger">
                 <i class="fa fa-trash" aria-hidden="true"></i>
