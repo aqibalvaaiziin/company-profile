@@ -4,16 +4,9 @@
     
     class blog_model extends CI_Model {
     
-        public function tambaData(){
-            $data =
-            array(
-              "nama" => $this->input->post("nama",true),
-              "nim" => $this->input->post("nim",true),
-              "email" => $this->input->post("email",true),
-              "jurusan" => $this->input->post("jurusan",true),
-            );
-            $this->db->insert('mahasiswa',$data);
-          }
+        public function tambahData($data_blog){
+          $this->db->insert('blog',$data_blog);
+        }
     
     }
     
