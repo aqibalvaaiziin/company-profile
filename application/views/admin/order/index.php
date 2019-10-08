@@ -1,7 +1,7 @@
 <div class="cc">
     <h1 class="mt-2 mb-3 font-weight-bold">Blog</h1>
     <div class="mb-3">
-        <a href="<?= base_url().'admin/room/tambah'; ?>" class="btn btn-primary">
+        <a href="<?= base_url().'admin/order/tambah'; ?>" class="btn btn-primary">
             <i class="fa fa-plus" aria-hidden="true"></i>
             Tambah Data
         </a>

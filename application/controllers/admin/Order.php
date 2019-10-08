@@ -19,6 +19,22 @@
             $this->load->view('admin/template/bar');
             $this->load->view('admin/order/index',$data);
             $this->load->view('admin/template/footer');
+        }
+        
+        public function tambah(){
+            
+            if ($this->form_validation->run() == FALSE) {
+                # code...
+                $this->load->view('admin/template/header');
+                $this->load->view('admin/template/bar');
+                $this->load->view('admin/order/tambah');
+                $this->load->view('admin/template/footer');
+            } else {
+                # code...
+                echo "<script>console.log('jalan bawah');</script>" ;
+                $this->order_model->tambahData();
+                // redirect('admin/order','refresh');
+            }
             
         }
     
