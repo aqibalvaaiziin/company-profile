@@ -1,4 +1,4 @@
-<div class="sec bg-dark text-white mt-4 position-relative" data-aos="fade-up">
+<div class="sec bg-dark text-white mt-4 position-relative p-5" data-aos="fade-up">
 	<div class="d-flex justify-content-between">
 
 		<div class="w-25">

@@ -12,7 +12,6 @@
             $this->load->view('user/about/text');
             $this->load->view('user/template/footer');
         }
-    
     }
     
     /* End of file About.php */

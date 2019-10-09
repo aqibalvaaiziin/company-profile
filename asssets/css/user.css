@@ -173,6 +173,7 @@
 	font-size: 5rem;
 	z-index: -1;
 	font-weight: 600;
+	width: 1366px;
 }
 
 .subHeading {
@@ -227,7 +228,7 @@
 }
 
 .newContent {
-	margin-top: 104vh;
+	margin-top: 50rem;
 }
 
 .headIndex {

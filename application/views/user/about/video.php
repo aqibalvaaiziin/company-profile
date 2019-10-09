@@ -61,7 +61,7 @@
 	</div>
 	<div class="ml-4 pr-4" style="width:50%">
 		<div class="big" style="margin-left:42rem;font-size:100px">About Us</div>
-		<div class="subHeading" style="margin-left:5rem;margin-top:6rem;font-size:30px">About us</div>
+		<div class="subHeading text-muted" style="margin-left:5rem;margin-top:6rem;font-size:30px">About us</div>
 		<p class="mt-3 text-muted" style="font-size:1.3rem">
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nobis, provident iure praesentium dicta, aliquam accusamus similique esse, magni odio velit hic? Maxime quaerat excepturi unde officia sit rem ea.
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nobis, provident iure praesentium dicta, aliquam accusamus similique esse, magni odio velit hic? Maxime quaerat excepturi unde officia sit rem ea.
