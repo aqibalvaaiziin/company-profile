@@ -10,6 +10,7 @@
     <table class="table" id="myTable">
       <thead class="thead-dark">
         <tr>
+          <th scope="col">ID</th>
           <th scope="col">TITLE</th>
           <th scope="col">DESCRIPTION</th>
           <th scope="col">DATE</th>
@@ -23,6 +24,7 @@
       <tbody>
         <?php foreach($blogs as $blog): ?>
           <tr>
+            <td><?php echo $blog->id; ?></td>
             <td><?php echo $blog->title; ?></td>
             <td><?php echo str_word_count($blog->desc) > 25 ? substr($blog->desc,0,30)."[...]" : $blog->desc ; ?></td>
             <td><?php echo $blog->date; ?></td>

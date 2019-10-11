@@ -4,13 +4,16 @@
     
     class order_model extends CI_Model {
     
-        public function tampilData(){
-            return $this->db->get('order')->result();
-        }
-    
-    
+      public function tampilData(){
+          return $this->db->get('order')->result();
+      }
+      
 
-    public function tambahData(){
+      public function getDataById($id){
+        return $this->db->get_where('order',array('id'=>$id))->row_array();
+      }
+
+      public function editData(){
         $data =
         array(
           "id_room" => $this->input->post("id_room",true),
@@ -18,8 +21,12 @@
           "total" => $this->input->post("total",true),
           "id_service" => $this->input->post("id_service",true),
         );
-        $this->db->insert('order',$data);
+        $this->db->where('id', $this->input->post('id'));
+        $this->db->update('order', $data);
       }
+
+      
+
     }
     
     /* End of file order_model.php */

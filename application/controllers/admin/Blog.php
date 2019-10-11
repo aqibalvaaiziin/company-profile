@@ -21,9 +21,14 @@
             $this->load->view('admin/template/footer');
         }
 
-        public function tambah(){
-            $this->form_validation->set_rules('title','Title','trim|required|min_length[5]');
-            
+        public function tambah()
+        {
+            $this->form_validation->set_rules('title', 'Title', 'required');
+            $this->form_validation->set_rules('desc', 'Description', 'required');
+            $this->form_validation->set_rules('date', 'Date', 'required');
+            $this->form_validation->set_rules('author', 'Author', 'required');
+            $this->form_validation->set_rules('view', 'View', 'required|numeric');
+
             if ($this->form_validation->run() == FALSE) {    
                 $this->load->view('admin/template/header');
                 $this->load->view('admin/template/bar');
@@ -33,11 +38,12 @@
                 $upload = $this->Blog_model->upload();
                 if ($upload['result'] == 'success') {
                     $this->Blog_model->tambahData($upload);
-                    $this->session->set_flashdata('add', 'New Blog added');
+                    $this->session->set_flashdata('add', 'New Product added');
                     redirect('admin/blog');
                 }else{
                     echo $upload['error'];
                 }
+                
             }
         }
         
@@ -54,22 +60,31 @@
             redirect('admin/blog','refresh');     
         }
 
-        public function edit($id){
-            $data ['blog'] = $this->Blog_model->getDataById($id);
-            $this->form_validation->set_rules('title', 'Title', array('required', 'min_length[4]'));
-            $this->form_validation->set_rules('desc', 'Desc', 'required|min_length[4]');
+        public function edit($id)
+        {
+
+            $data['blog']=$this->Blog_model->getDataById($id);
+            $this->form_validation->set_rules('title', 'Title', 'required');
+            $this->form_validation->set_rules('desc', 'Description', 'required');
             $this->form_validation->set_rules('date', 'Date', 'required');
-            $this->form_validation->set_rules('author', 'Author', 'required|min_length[4]');
+            $this->form_validation->set_rules('author', 'Author', 'required');
             $this->form_validation->set_rules('view', 'View', 'required|numeric');
-            if ($this->form_validation->run() == FALSE) {
-                # code...
-                $this->load->view('admin/template/header',$data);
+
+            if ($this->form_validation->run() == FALSE) {    
+                $this->load->view('admin/template/header');
+                $this->load->view('admin/template/bar');
                 $this->load->view('admin/blog/edit',$data);
                 $this->load->view('admin/template/footer');
             } else {
-                # code...
-                $this->Blog_model->editData();
-                redirect('admin/blog','refresh');
+                $upload = $this->Blog_model->upload();
+                if ($upload['result'] == 'success') {
+                    $this->Blog_model->editData($upload,$id);
+                    $this->session->set_flashdata('add', 'New Product edited');
+                    redirect('admin/blog');
+                }else{
+                    echo $upload['error'];
+                }
+                
             }
         }
     

@@ -37,11 +37,13 @@
           </p>
           <p class="card-text">
             <label for=""><b>IMAGE <span style="margin-left:3.3rem">:</span> </b></label>
-              <?= $blog['view']; ?>
           </p>
-          <a href="<?= base_url() ;?>admin/blog" class ="btn btn-primary float-right">
-            <i class="fa fa-sign-out" aria-hidden="true">&nbsp;Keluar</i>
-          </a>
+          <img src="<?= base_url().'/uploads/blogs/'.$blog['image']?>" alt="" style="margin-left:9rem;width:350px;heigth:300px">
+          <div>
+            <a href="<?= base_url() ;?>admin/blog" class ="btn btn-primary float-right">
+              <i class="fa fa-sign-out" aria-hidden="true">&nbsp;Keluar</i>
+            </a>
+          </div>
         </div>
       </div>
     </div>

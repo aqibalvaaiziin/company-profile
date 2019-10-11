@@ -11,7 +11,8 @@
             <?= validation_errors() ?>
           </div>
         <?php endif; ?>
-          <form action="" method="post">
+        <?php echo form_open_multipart('admin/blog/edit/'.$blog['id']) ?>
+          <form action="" method="post" enctype="multipart/form-data">
           <input type="hidden" name="id" value="<?= $blog['id'] ;?>">
             <h1>ID</h1>
             <h1><?= $blog['id'] ?></h1>
@@ -21,7 +22,7 @@
             </div>
               <label for="desc">DESC</label>
             <div class="form-group">
-              <textarea name="desc" id="desc" cols="149" rows="10"><?= $blog['desc'] ?></textarea>
+              <textarea name="desc" id="desc" style="width:67rem;height:10rem"><?= $blog['desc'] ?></textarea>
             </div>
             <div class="form-group">
               <label for="date">DATE</label>
@@ -35,8 +36,13 @@
               <label for="view">VIEW</label>
               <input type="number" class="form-control" id="view" name="view" value="<?= $blog['view'] ;?>">
             </div>
+            <div class="form-group">
+                <label for="">IMAGE</label>
+                <input type="file" name="image" class="form-control pt-3 pb-5">
+              </div>
             <button type="submit" name="submit" class="btn btn-success float-right">Submit</button>
           </form>
+          <?php echo form_close() ?>
         </div>
       </div>
     </div>

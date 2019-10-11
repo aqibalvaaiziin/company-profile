@@ -1,5 +1,5 @@
 <div class="cc">
-    <h1 class="mt-2 mb-3 font-weight-bold">Blog</h1>
+    <h1 class="mt-2 mb-3 font-weight-bold">Room</h1>
     <div class="mb-3">
         <a href="<?= base_url().'admin/room/tambah'; ?>" class="btn btn-primary">
             <i class="fa fa-plus" aria-hidden="true"></i>
@@ -10,6 +10,7 @@
     <table class="table" id="myTable">
       <thead class="thead-dark">
         <tr>
+          <th scope="col">ROOM_ID</th>
           <th scope="col">NAME</th>
           <th scope="col">PEOPLE</th>
           <th scope="col">TYPE</th>
@@ -22,6 +23,7 @@
       <tbody>
         <?php foreach($rooms as $room): ?>
           <tr>
+            <td><?php echo $room->id; ?></td>
             <td><?php echo $room->name; ?></td>
             <td><?php echo $room->people; ?></td>
             <td><?php echo $room->type; ?></td>
