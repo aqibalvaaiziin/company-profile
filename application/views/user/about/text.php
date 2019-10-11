@@ -8,7 +8,7 @@
         <div class="d-flex flex-row justify-content-around people mt-5">
         <div class="">
                 <div class="iPeople mb-3">
-                    <img src="<?= base_url().'asssets/images/person_2.jpg' ?>" alt="" 
+                    <img src="<?= base_url().'assets/images/person_2.jpg' ?>" alt="" 
                         style="width:200px;height:200px;border-radius:50%"
                     >
                 </div>
@@ -19,7 +19,7 @@
             </div>
             <div class="">
                 <div class="iPeople mb-3">
-                    <img src="<?= base_url().'asssets/images/person_4.jpg' ?>" alt="" 
+                    <img src="<?= base_url().'assets/images/person_4.jpg' ?>" alt="" 
                         style="width:200px;height:200px;border-radius:50%"
                     >
                 </div>
@@ -31,7 +31,7 @@
             </div>    
         <div class="">
                 <div class="iPeople mb-3">
-                    <img src="<?= base_url().'asssets/images/people2.jpg' ?>" alt="" 
+                    <img src="<?= base_url().'assets/images/people2.jpg' ?>" alt="" 
                         style="width:200px;height:200px;border-radius:50%"
                     >
                 </div>
@@ -42,7 +42,7 @@
             </div>
             <div class="">
                 <div class="iPeople mb-3">
-                    <img src="<?= base_url().'asssets/images/stylist-5.jpg' ?>" alt="" 
+                    <img src="<?= base_url().'assets/images/stylist-5.jpg' ?>" alt="" 
                         style="width:200px;height:200px;border-radius:50%"
                     >
                 </div>
@@ -58,7 +58,7 @@
 <section class="sec mt-5 " style="background-color:#F7F5F6;width:1366px;height:360px;margin-bottom:-30px" data-aos="fade-left">
 <div class=" d-flex flex-row justify-content-between">
     <div>
-        <img src="<?= base_url().'asssets/images/lala.png' ?>" alt="" 
+        <img src="<?= base_url().'assets/images/lala.png' ?>" alt="" 
         style="width:700px;height:456px;margin-top:-8rem;margin-left:-12rem"
         >
     </div>

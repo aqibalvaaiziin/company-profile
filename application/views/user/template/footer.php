@@ -95,9 +95,9 @@
 
 </script>
 
-<script src="<?= base_url().'/asssets/js/carousel.js' ?>"></script>
-<script src="<?= base_url().'/asssets/js/video.js' ?>"></script>
-<script src="<?= base_url().'/asssets/js/fixnav.js' ?>"></script>
+<script src="<?= base_url().'/assets/js/carousel.js' ?>"></script>
+<script src="<?= base_url().'/assets/js/video.js' ?>"></script>
+<script src="<?= base_url().'/assets/js/fixnav.js' ?>"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class blog_model extends CI_Model {
+    class Blog_model extends CI_Model {
     
       public function tampilData(){
         $value = $this->db->get('blog')->result();
@@ -38,6 +38,28 @@
         }  
       }
     
+      public function getDataById($id){
+        return $this->db->get_where('blog',array('id'=>$id))->row_array();
+      }
+
+      public function hapusData($id){
+        $this->db->where('id', $id);
+        $this->db->delete('blog');       
+      }
+
+      public function editData(){
+        $data =
+        array(
+          "title" => $this->input->post("title",true),
+          "desc" => $this->input->post("desc",true),
+          "date" => $this->input->post("date",true),
+          "author" => $this->input->post("author",true),
+          "view" => $this->input->post("view",true),
+        );
+        $this->db->where('id', $this->input->post('id'));
+        $this->db->update('blog', $data);
+      }
+
     }
     
     /* End of file blog_model.php */

@@ -1,5 +1,5 @@
 <div class="cc">
-    <h1 class="mt-2 mb-3 font-weight-bold">Blog</h1>
+    <h1 class="mt-2 mb-3 font-weight-bold">Order</h1>
     <div class="mb-3">
         <a href="<?= base_url().'admin/order/tambah'; ?>" class="btn btn-primary">
             <i class="fa fa-plus" aria-hidden="true"></i>
@@ -10,11 +10,11 @@
     <table class="table" id="myTable">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">ID_ROOM</th>
-          <th scope="col">DATE</th>
-          <th scope="col">ID_SERVICE</th>
-          <th scope="col">TOTAL</th>
-          <th scope="col">ACTION</th>
+          <th scope="col" style="width:20%">ID_ROOM</th>
+          <th scope="col" style="width:20%">DATE</th>
+          <th scope="col" style="width:20%">ID_SERVICE</th>
+          <th scope="col" style="width:25%">TOTAL</th>
+          <th scope="col" style="width:15%">ACTION</th>
         </tr>
       </thead>
     

@@ -30,14 +30,14 @@
             <td><?php echo $blog->view; ?></td>
             <td><?php echo $blog->image; ?></td>
             <td>
-              <a href="" class="btn btn-danger">
-                <i class="fa fa-trash" aria-hidden="true"></i>
-              </a>
-              <a href="" class="btn btn-primary">
+              <a href="<?= base_url(); ?>admin/blog/detail/<?= $blog->id ;?>" class="btn btn-primary">
                 <i class="fa fa-eye" aria-hidden="true"></i>
               </a>
-              <a href="" class="btn btn-warning">
+              <a href="<?= base_url(); ?>admin/blog/edit/<?= $blog->id ;?>" class="btn btn-warning">
                 <i class="fa fa-pen" aria-hidden="true"></i>
+              </a>
+              <a href="<?= base_url(); ?>admin/blog/hapus/<?= $blog->id ;?>" class="btn btn-danger">
+                <i class="fa fa-trash" aria-hidden="true"></i>
               </a>
             </td>
           </tr>

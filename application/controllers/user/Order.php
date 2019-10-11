@@ -12,7 +12,5 @@
         }
     
     }
-    
     /* End of file Order.php */
-    
 ?>

@@ -71,7 +71,7 @@
 						<div class="modal-body mb-0 p-0">
 
 							<div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wTcNtgA6gHs"
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/b7BE0Kj0Wd4"
 									allowfullscreen></iframe>
 							</div>
 
@@ -121,7 +121,7 @@
 						<div class="modal-body mb-0 p-0">
 
 							<div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vlDzYIIOYmM"
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H_QFU3vPM_Q"
 									allowfullscreen></iframe>
 							</div>
 
