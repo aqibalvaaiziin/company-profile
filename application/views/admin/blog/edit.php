@@ -38,7 +38,8 @@
             </div>
             <div class="form-group">
                 <label for="">IMAGE</label>
-                <input type="file" name="image" class="form-control pt-3 pb-5">
+                <input type="hidden" name="tempImg" value="<?= $blog['image'];?>">
+                <input type="file" name="image" class="form-control pt-3 pb-5"">
               </div>
             <button type="submit" name="submit" class="btn btn-success float-right">Submit</button>
           </form>

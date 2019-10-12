@@ -19,13 +19,20 @@
       }
 
       public function editData($upload,$id){
+        
+        $img;
+        if(!$upload['file']['file_name']){
+            $img = $this->input->post('tempImg');  
+        }else{
+            $img = $upload['file']['file_name'];
+        }
         $data = array(
           'title' => $this->input->post('title',true),
           'desc' => $this->input->post('desc', true),
           'date' => $this->input->post('date', true),
           'author' => $this->input->post('author', true),
           'view' => $this->input->post('view', true),
-          'image' => $upload['file']['file_name'],
+          'image' => $img,
       );
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('blog', $data);
@@ -50,14 +57,9 @@
         $config['allowed_types'] = 'jpg|png|jpeg|gif';
 
         $this->load->library('upload', $config);
-
-        if($this->upload->do_upload('image')){
-            $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');      
-            return $return;
-        }else{    
-            $return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());      return $return;   
-        }  
-    }
+        $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');      
+        return $return;
+      }
 
     private function hapusDataImage($id)
     {

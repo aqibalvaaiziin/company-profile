@@ -10,7 +10,6 @@
             parent::__construct();
             $this->load->model('Blog_model');
         }
-        
     
         public function index()
         {
@@ -42,8 +41,7 @@
                     redirect('admin/blog');
                 }else{
                     echo $upload['error'];
-                }
-                
+                }       
             }
         }
         
