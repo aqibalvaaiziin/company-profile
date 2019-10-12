@@ -11,6 +11,7 @@
             $this->load->model('Blog_model');
         }
     
+    
         public function index()
         {
             $data['blogs'] = $this->Blog_model->tampilData();
@@ -60,7 +61,6 @@
 
         public function edit($id)
         {
-
             $data['blog']=$this->Blog_model->getDataById($id);
             $this->form_validation->set_rules('title', 'Title', 'required');
             $this->form_validation->set_rules('desc', 'Description', 'required');
@@ -74,18 +74,24 @@
                 $this->load->view('admin/blog/edit',$data);
                 $this->load->view('admin/template/footer');
             } else {
-                $upload = $this->Blog_model->upload();
-                if ($upload['result'] == 'success') {
-                    $this->Blog_model->editData($upload,$id);
-                    $this->session->set_flashdata('add', 'New Product edited');
-                    redirect('admin/blog');
-                }else{
-                    echo $upload['error'];
+                if(isset($_POST['submit'])){
+                    $filename = $this->input->post('image');
+                    if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != ''){
+                        $upload = $this->Blog_model->upload();
+                        if ($upload['result'] == 'success') {
+                            $this->Blog_model->editData($upload,$id);
+                            if(file_exists(base_url().'uploads/blogs'.$filename)){
+                                unlink(base_url().'uploads/blogs'.$filename);
+                            }       
+                        } 
+                    }else{
+                        $this->Blog_model->editData($filename,$id);
+                    }
+                    
+                    redirect('admin/blog/');
                 }
-                
             }
         }
-    
     }   
     /* End of file Blog.php */
 ?>
