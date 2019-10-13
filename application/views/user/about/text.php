@@ -1,7 +1,7 @@
 <section class="sec mb-5" data-aos="zoom-in-up">
 	<div class="text-center mb-5">
 		<div class="text-center" data-aos="zoom-in-up">
-			<h1 class="text-center big">Founder</h1>
+			<h1 class="text-center big tC">Founder</h1>
 			<h2 class="subHeading">& Co-Founder</h2>
 			<p class="text-muted font-weight-bolder">THEY ARE THE ORGANISTRATOR OF THE FORMATION OF THIS HOTEL </p>
         </div>

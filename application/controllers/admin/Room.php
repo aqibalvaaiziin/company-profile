@@ -21,20 +21,6 @@
             $this->load->view('admin/template/footer');
         }
 
-        public function tambah(){
-            
-            if ($this->form_validation->run() == FALSE) {
-              # code...
-                $this->load->view('admin/template/header');
-                $this->load->view('admin/template/bar');
-                $this->load->view('admin/room/tambah');
-                $this->load->view('admin/template/footer');
-            } else {
-              # code...
-              $this->room_model->tambaData();
-              redirect('admin/room','refresh');
-            }
-          }
     
     }
     

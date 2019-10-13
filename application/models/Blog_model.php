@@ -14,8 +14,9 @@
       }
 
       public function hapusData($id){
-        $this->db->where('id', $id);
-        $this->db->delete('blog');       
+        $this->hapusDataImage($id);
+        return $this->db->delete('blog',array('id' => $id));
+        
       }
 
       public function editData($upload,$id){
@@ -60,6 +61,7 @@
           $this->load->library('upload', $config);
 
           if($this->upload->do_upload('image')){
+              
               $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');      
               return $return;
           }else{    
@@ -72,8 +74,8 @@
 
     private function hapusDataImage($id)
     {
-        $product = $this->getDataById($id);
-        $filename = $product['image'];
+        $blog = $this->getDataById($id);
+        $filename = $blog['image'];
         unlink(FCPATH."uploads/blogs/".$filename);
     }
 

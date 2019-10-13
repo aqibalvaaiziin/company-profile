@@ -71,15 +71,15 @@
                 
             } else {
                 if(isset($_POST['submit'])){
-                    $oldFile = $this->Blog_model->getDataById($id);
                     $filename = $this->input->post('tempImg');
-                    if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != ''){
+                    if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != ''){ 
+                        $oldFile = $this->Blog_model->getDataById($id);
                         $upload = $this->Blog_model->upload();
-                            $this->Blog_model->editData($upload,$id);
-                            if($oldFile['image'] != null){
-                                $target = './uploads/blogs'.$oldFile['image'];
-                                unlink($target);      
-                            } 
+                        $this->Blog_model->editData($upload,$id);
+                        if($oldFile->image != null){
+                            $filename = $oldFile['image'];
+                            unlink(FCPATH."uploads/blogs/".$filename);   
+                        }
                     }else{
                         $this->Blog_model->editData($filename,$id);
                     }

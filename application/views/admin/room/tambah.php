@@ -1,36 +1,54 @@
 <div class="cc">
-  <div class="row mt-3">
-    <div class="col-md-12">
-      <div class="card">
-        <div class="card-header">
-          <h2>Form Tambah Data Kamar</h2>
-        </div>
-        <div class="card-body">
-          <form action="" method="post">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" name="name">
-            </div>
-            <div class="form-group">
-              <label for="people">People</label>
-              <input type="text" class="form-control" id="people" name="people">
-            </div>
-            <div class="form-group">
-              <label for="type">Type</label>
-              <input type="text" class="form-control" id="type" name="type">
-            </div>
-            <div class="form-group">
-              <label for="service">Service</label>
-              <input type="text" class="form-control" id="service" name="service">
-            </div>
-            <div class="form-group">
-              <label for="price">Price</label>
-              <input type="number" class="form-control" id="price" name="price">
-            </div>
-            <button type="submit" name="submit" class="btn btn-success float-right">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<div class="row mt-3">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<h2>Form Tambah Data Room</h2>
+					</div>
+					<div class="card-body">
+            <?php if(validation_errors()): ?>
+              <div class="alert alert-danger" role="alert">
+                <?= validation_errors() ?>
+              </div>
+            <?php endif; ?>
+						<?php echo form_open_multipart('admin/room/tambah') ?>
+						<form action="" method="post" enctype="multipart/form-data">
+							<div class="form-group">
+								<label for="">NAME</label>
+								<input type="text" name="name" class="form-control">
+							</div>
+              <label for="" class="mt-2">PEOPLE</label>
+							<div class="form-group mb-1">
+								<input type="date" name="people" class="form-control">
+							</div>
+							<div class="form-group mt-1">
+								<label for="">TYPE</label>
+								<input type="date" name="type" class="form-control">
+							</div>
+							<div class="form-group mt-1">
+								<label for="">SERVICE</label>
+								<input type="text" name="service" class="form-control">
+							</div>
+							<div class="form-group mt-1">
+                <label for="">PRICE</label>
+                <input type="number" name="price" class="form-control">
+              </div>
+							<div class="form-group mt-1">
+                <label for="">IMAGE</label>
+                <input type="file" name="image" class="form-control pt-3 pb-5">
+              </div>
+							<div class="form-group mt-3">
+								<button type="submit" class="btn btn-success float-right ">
+									<i class="fas fa-plus"></i>
+									<span>Submit</span>
+								</button>
+							</div>
+						</form>
+						<?php echo form_close() ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

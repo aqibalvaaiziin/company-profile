@@ -30,14 +30,14 @@
             <td><?php echo $room->service; ?></td>
             <td><?php echo $room->price; ?></td>
             <td>
-              <a href="" class="btn btn-danger">
-                <i class="fa fa-trash" aria-hidden="true"></i>
-              </a>
-              <a href="" class="btn btn-primary">
+            <a href="<?= base_url(); ?>admin/room/detail/<?= $room->id ;?>" class="btn btn-primary">
                 <i class="fa fa-eye" aria-hidden="true"></i>
               </a>
-              <a href="" class="btn btn-warning">
+              <a href="<?= base_url(); ?>admin/room/edit/<?= $room->id ;?>" class="btn btn-warning">
                 <i class="fa fa-pen" aria-hidden="true"></i>
+              </a>
+              <a href="<?= base_url(); ?>admin/room/hapus/<?= $room->id ;?>" class="btn btn-danger" onClick="return confirm('yakin mau hapus');">
+                <i class="fa fa-trash" aria-hidden="true"></i>
               </a>
             </td>
           </tr>
