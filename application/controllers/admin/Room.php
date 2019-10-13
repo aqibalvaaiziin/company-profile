@@ -55,10 +55,42 @@
         public function hapus($id){
             $this->room_model->hapusData($id);
             $this->session->set_flashdata('flash-data', 'dihapus');
-            redirect('admin/blog','refresh');     
+            redirect('admin/room','refresh');     
         }
 
-    
+        public function edit($id)
+        {
+            $data['room']=$this->room_model->getDataById($id);
+            $this->form_validation->set_rules('varName', 'Name', 'required');
+            $this->form_validation->set_rules('people', 'People', 'required');
+            $this->form_validation->set_rules('type', 'Type', 'required');
+            $this->form_validation->set_rules('service', 'Service', 'required');
+            $this->form_validation->set_rules('price', 'Price', 'required|numeric');
+            if ($this->form_validation->run() == FALSE) {    
+                $this->load->view('admin/template/header');
+                $this->load->view('admin/template/bar');
+                $this->load->view('admin/room/edit',$data);
+                $this->load->view('admin/template/footer');
+                
+            } else {
+                if(isset($_POST['submit'])){
+                    $filename = $this->input->post('tempImg');
+                    if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != ''){ 
+                        $oldFile = $this->room_model->getDataById($id);
+                        $upload = $this->room_model->upload();
+                        $this->room_model->editData($upload,$id);
+                        if($oldFile->image != null){
+                            $filename = $oldFile['image'];
+                            unlink(FCPATH."uploads/rooms/".$filename);   
+                        }
+                    }else{
+                        $this->room_model->editData($filename,$id);
+                    }
+                    redirect('admin/room/');
+                }
+            }
+        }
+
     }
     
     /* End of file Room.php */

@@ -41,8 +41,8 @@
         }
 
         public function hapusData($id){
-            $this->db->where('id', $id);
-            $this->db->delete('room');       
+            $this->hapusDataImage($id);
+            return $this->db->delete('room',array('id' => $id));
         }
 
         private function hapusDataImage($id)
@@ -51,6 +51,26 @@
             $filename = $room['image'];
             unlink(FCPATH."uploads/rooms/".$filename);
         }
+
+        public function editData($upload,$id){
+            $uploads;
+            if($upload > 0){
+                $uploads = $upload['file']['file_name'];
+            }
+            else{
+                $uploads = $this->input->post('tempImg');
+            }
+            $data = array(
+                'name' => $this->input->post('varName',true),
+                'people' => $this->input->post('people', true),
+                'type' => $this->input->post('type', true),
+                'service' => $this->input->post('service', true),
+                'price' => $this->input->post('price', true),
+                'image' => $uploads,
+            );
+            $this->db->where('id', $this->input->post('id'));
+            $this->db->update('room', $data);
+            }
 
     }
     
