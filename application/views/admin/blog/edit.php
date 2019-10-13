@@ -1,4 +1,4 @@
-<div class="container">
+<div class="cc">
 	<div class="row mt-3">
 		<div class="col-md-12">
 			<div class="card">
@@ -23,7 +23,7 @@
 						</div>
 						<label for="desc">DESC</label>
 						<div class="form-group">
-							<textarea name="desc" id="desc" style="width:67rem;height:10rem"><?= $blog['desc'] ?></textarea>
+							<textarea class ="rounded form-control" name="desc" id="desc" style="width:62.3rem;height:10rem"><?= $blog['desc'] ?></textarea>
 						</div>
 						<div class="form-group">
 							<label for="date">DATE</label>
@@ -44,7 +44,8 @@
 						</div>
 						<div class="form-group">
 							<label for="">NEW IMAGE</label>
-							<input type="file" name="image" class="form-control pt-3 pb-5" value="<?= $blog['image'];?>">
+              <input type="file" name="image" class="form-control pt-3 pb-5 mb-2" value="<?= $blog['image'];?>">
+              <small class="font-weight-bolder">&nbsp;Biarkan Kosong Jika Tidak Ingin Mengganti Gambar</small>
 						</div>
 						<button type="submit" name="submit" class="btn btn-success float-right">Submit</button>
 					</form>

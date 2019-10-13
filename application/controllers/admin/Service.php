@@ -9,7 +9,6 @@
         {
             parent::__construct();
             $this->load->model('service_model');
-            
         }
         
 

@@ -25,12 +25,12 @@
         <?php foreach($blogs as $blog): ?>
           <tr>
             <td><?php echo $blog->id; ?></td>
-            <td><?php echo $blog->title; ?></td>
-            <td><?php echo str_word_count($blog->desc) > 25 ? substr($blog->desc,0,30)."[...]" : $blog->desc ; ?></td>
-            <td><?php echo $blog->date; ?></td>
-            <td><?php echo $blog->author; ?></td>
-            <td><?php echo $blog->view; ?></td>
-            <td><?php echo $blog->image; ?></td>
+            <td><?php echo str_word_count($blog->title) > 25 ? substr($blog->title,0,20)."[...]" : $blog->title ; ?></td>
+            <td><?php echo str_word_count($blog->desc) > 25 ? substr($blog->desc,0,20)."[...]" : $blog->desc ; ?></td>
+            <td><?php echo str_word_count($blog->date) > 25 ? substr($blog->date,0,20)."[...]" : $blog->date ; ?></td>
+            <td><?php echo str_word_count($blog->author) > 25 ? substr($blog->author,0,20)."[...]" : $blog->author ; ?></td>
+            <td><?php echo str_word_count($blog->view) > 25 ? substr($blog->view,0,20)."[...]" : $blog->view ; ?></td>
+            <td><?php echo str_word_count($blog->image) > 25 ? substr($blog->image,0,20)."[...]" : $blog->image ; ?></td>
             <td>
               <a href="<?= base_url(); ?>admin/blog/detail/<?= $blog->id ;?>" class="btn btn-primary">
                 <i class="fa fa-eye" aria-hidden="true"></i>
@@ -38,7 +38,7 @@
               <a href="<?= base_url(); ?>admin/blog/edit/<?= $blog->id ;?>" class="btn btn-warning">
                 <i class="fa fa-pen" aria-hidden="true"></i>
               </a>
-              <a href="<?= base_url(); ?>admin/blog/hapus/<?= $blog->id ;?>" class="btn btn-danger">
+              <a href="<?= base_url(); ?>admin/blog/hapus/<?= $blog->id ;?>" class="btn btn-danger" onClick="return confirm('yakin mau hapus');">
                 <i class="fa fa-trash" aria-hidden="true"></i>
               </a>
             </td>

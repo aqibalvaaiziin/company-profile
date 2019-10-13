@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mb-3">
   <div class="row mt-3">
     <div class="col-md-12">
       <div class="card">
@@ -41,7 +41,7 @@
           <img src="<?= base_url().'/uploads/blogs/'.$blog['image']?>" alt="" style="margin-left:9rem;width:350px;heigth:300px">
           <div>
             <a href="<?= base_url() ;?>admin/blog" class ="btn btn-primary float-right">
-              <i class="fa fa-sign-out" aria-hidden="true">&nbsp;Keluar</i>
+              <i class="far fa-arrow-alt-circle-left" aria-hidden="true">&nbsp;Keluar</i>
             </a>
           </div>
         </div>

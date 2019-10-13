@@ -3,7 +3,6 @@
     defined('BASEPATH') OR exit('No direct script access allowed');
     
     class Blog extends CI_Controller {
-
         
         public function __construct()
         {
@@ -20,7 +19,6 @@
             $this->load->view('admin/blog/index',$data);
             $this->load->view('admin/template/footer');
         }
-
         public function tambah()
         {
             $this->form_validation->set_rules('title', 'Title', 'required');
@@ -28,7 +26,6 @@
             $this->form_validation->set_rules('date', 'Date', 'required');
             $this->form_validation->set_rules('author', 'Author', 'required');
             $this->form_validation->set_rules('view', 'View', 'required|numeric');
-
             if ($this->form_validation->run() == FALSE) {    
                 $this->load->view('admin/template/header');
                 $this->load->view('admin/template/bar');
@@ -52,13 +49,11 @@
             $this->load->view('admin/blog/detail',$data);
             $this->load->view('admin/template/footer');
         }
-
         public function hapus($id){
             $this->Blog_model->hapusData($id);
             $this->session->set_flashdata('flash-data', 'dihapus');
             redirect('admin/blog','refresh');     
         }
-
         public function edit($id)
         {
             $data['blog']=$this->Blog_model->getDataById($id);
@@ -67,7 +62,6 @@
             $this->form_validation->set_rules('date', 'Date', 'required');
             $this->form_validation->set_rules('author', 'Author', 'required');
             $this->form_validation->set_rules('view', 'View', 'required|numeric');
-
             if ($this->form_validation->run() == FALSE) {    
                 $data['lala'] = $this->input->post('tempImg');
                 $this->load->view('admin/template/header');
@@ -77,12 +71,14 @@
                 
             } else {
                 if(isset($_POST['submit'])){
+                    $oldFile = $this->Blog_model->getDataById($id);
                     $filename = $this->input->post('tempImg');
                     if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != ''){
                         $upload = $this->Blog_model->upload();
                             $this->Blog_model->editData($upload,$id);
-                            if(file_exists(base_url().'uploads/blogs'.$filename)){
-                                unlink(base_url().'uploads/blogs'.$filename);      
+                            if($oldFile['image'] != null){
+                                $target = './uploads/blogs'.$oldFile['image'];
+                                unlink($target);      
                             } 
                     }else{
                         $this->Blog_model->editData($filename,$id);
