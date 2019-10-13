@@ -19,14 +19,21 @@
       }
 
       public function editData($upload,$id){
-      
+        $uploads;
+        if($upload > 0){
+          $uploads = $upload['file']['file_name'];
+        }
+        else{
+          $uploads = $this->input->post('tempImg');
+        }
+
         $data = array(
           'title' => $this->input->post('title',true),
           'desc' => $this->input->post('desc', true),
           'date' => $this->input->post('date', true),
           'author' => $this->input->post('author', true),
           'view' => $this->input->post('view', true),
-          'image' => $upload['file']['file_name'],
+          'image' => $uploads,
       );
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('blog', $data);

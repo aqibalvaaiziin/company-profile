@@ -69,25 +69,24 @@
             $this->form_validation->set_rules('view', 'View', 'required|numeric');
 
             if ($this->form_validation->run() == FALSE) {    
+                $data['lala'] = $this->input->post('tempImg');
                 $this->load->view('admin/template/header');
                 $this->load->view('admin/template/bar');
                 $this->load->view('admin/blog/edit',$data);
                 $this->load->view('admin/template/footer');
+                
             } else {
                 if(isset($_POST['submit'])){
-                    $filename = $this->input->post('image');
+                    $filename = $this->input->post('tempImg');
                     if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != ''){
                         $upload = $this->Blog_model->upload();
-                        if ($upload['result'] == 'success') {
                             $this->Blog_model->editData($upload,$id);
                             if(file_exists(base_url().'uploads/blogs'.$filename)){
-                                unlink(base_url().'uploads/blogs'.$filename);
-                            }       
-                        } 
+                                unlink(base_url().'uploads/blogs'.$filename);      
+                            } 
                     }else{
                         $this->Blog_model->editData($filename,$id);
                     }
-                    
                     redirect('admin/blog/');
                 }
             }
