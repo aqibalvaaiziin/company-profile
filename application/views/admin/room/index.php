@@ -16,6 +16,7 @@
           <th scope="col">TYPE</th>
           <th scope="col">SERVICE</th>
           <th scope="col">PRICE</th>
+          <th scope="col">IMAGE</th>
           <th scope="col">ACTION</th>
         </tr>
       </thead>
@@ -24,11 +25,12 @@
         <?php foreach($rooms as $room): ?>
           <tr>
             <td><?php echo $room->id; ?></td>
-            <td><?php echo $room->name; ?></td>
-            <td><?php echo $room->people; ?></td>
-            <td><?php echo $room->type; ?></td>
-            <td><?php echo $room->service; ?></td>
-            <td><?php echo $room->price; ?></td>
+            <td><?php echo str_word_count($room->name) > 25 ? substr($room->name,0,20)."[...]" : $room->name ; ?></td>
+            <td><?php echo str_word_count($room->people) > 25 ? substr($room->people,0,20)."[...]" : $room->people ; ?></td>
+            <td><?php echo str_word_count($room->type) > 25 ? substr($room->type,0,20)."[...]" : $room->type ; ?></td>
+            <td><?php echo str_word_count($room->service) > 25 ? substr($room->service,0,20)."[...]" : $room->service ; ?></td>
+            <td><?php echo str_word_count($room->price) > 25 ? substr($room->price,0,20)."[...]" : $room->price ; ?></td>
+            <td><?php echo str_word_count($room->image) > 25 ? substr($room->image,0,20)."[...]" : $room->image ; ?></td>
             <td>
             <a href="<?= base_url(); ?>admin/room/detail/<?= $room->id ;?>" class="btn btn-primary">
                 <i class="fa fa-eye" aria-hidden="true"></i>

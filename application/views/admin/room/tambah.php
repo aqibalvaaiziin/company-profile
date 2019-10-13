@@ -7,37 +7,37 @@
 						<h2>Form Tambah Data Room</h2>
 					</div>
 					<div class="card-body">
-            <?php if(validation_errors()): ?>
-              <div class="alert alert-danger" role="alert">
-                <?= validation_errors() ?>
-              </div>
-            <?php endif; ?>
+						<?php if(validation_errors()): ?>
+						<div class="alert alert-danger" role="alert">
+							<?= validation_errors() ?>
+						</div>
+						<?php endif; ?>
 						<?php echo form_open_multipart('admin/room/tambah') ?>
 						<form action="" method="post" enctype="multipart/form-data">
 							<div class="form-group">
 								<label for="">NAME</label>
-								<input type="text" name="name" class="form-control">
+								<input type="text" name="varName" class="form-control">
 							</div>
-              <label for="" class="mt-2">PEOPLE</label>
+							<label for="" class="mt-2">PEOPLE</label>
 							<div class="form-group mb-1">
-								<input type="date" name="people" class="form-control">
+								<input type="text" name="people" class="form-control">
 							</div>
 							<div class="form-group mt-1">
 								<label for="">TYPE</label>
-								<input type="date" name="type" class="form-control">
+								<input type="text" name="type" class="form-control">
 							</div>
 							<div class="form-group mt-1">
 								<label for="">SERVICE</label>
 								<input type="text" name="service" class="form-control">
 							</div>
 							<div class="form-group mt-1">
-                <label for="">PRICE</label>
-                <input type="number" name="price" class="form-control">
-              </div>
+								<label for="">PRICE</label>
+								<input type="number" name="price" class="form-control">
+							</div>
 							<div class="form-group mt-1">
-                <label for="">IMAGE</label>
-                <input type="file" name="image" class="form-control pt-3 pb-5">
-              </div>
+								<label for="">IMAGE</label>
+								<input type="file" name="image" class="form-control pt-3 pb-5">
+							</div>
 							<div class="form-group mt-3">
 								<button type="submit" class="btn btn-success float-right ">
 									<i class="fas fa-plus"></i>
