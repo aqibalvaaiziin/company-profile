@@ -5,7 +5,7 @@
 			<h2 class="subHeading">& Co-Founder</h2>
 			<p class="text-muted font-weight-bolder">THEY ARE THE ORGANISTRATOR OF THE FORMATION OF THIS HOTEL </p>
         </div>
-        <div class="d-flex flex-row justify-content-around people mt-5">
+        <div class="d-flex flex-row justify-content-around people mt-5" data-aos="zoom-in-up">
         <div class="">
                 <div class="iPeople mb-3">
                     <img src="<?= base_url().'assets/images/person_2.jpg' ?>" alt="" 

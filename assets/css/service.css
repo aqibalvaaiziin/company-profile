@@ -1,0 +1,55 @@
+.serviceContent {
+	width: 590px;
+	height: 756px;
+	padding: 25px;
+	border: 2px solid rgb(163, 130, 130);
+}
+
+.serviceContent img {
+	width: 540px;
+	height: 650px;
+}
+
+.serviceContent img:hover {
+	opacity: 0.8;
+}
+
+.serviceContent p {
+	background: rgb(99, 80, 80);
+	color: whitesmoke;
+	font-size: 22px;
+    width: 87%;
+    float: right;
+    padding: 10px 30px;
+    margin-right: 0.7rem;
+}
+
+.serviceContent span {
+	position: relative;
+	width: 300px;
+	background: rgb(99, 80, 80);
+	color: whitesmoke;
+	padding: 10px;
+	text-align: center;
+	border-radius: 8px;
+	display: block;
+	margin: 4rem 7rem;
+	opacity: 0;
+	transition: 1s opacity;
+}
+
+.serviceContent span::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: -5px;
+    background: rgb(99, 80, 80);
+    z-index: 8;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.serviceContent:hover > span{
+    opacity: 1;
+}

@@ -4,6 +4,14 @@
     
     class Blog_model extends CI_Model {
     
+      public function cariDataBlog(){
+        $keyword = $this->input->post("keyword");
+        $this->db->like('title',$keyword);
+        $this->db->or_like('date',$keyword);
+        $this->db->or_like('author',$keyword);
+        return $this->db->get('blog') -> result();
+      }
+
       public function tampilData(){
         $value = $this->db->get('blog')->result();
         return $value;

@@ -7,9 +7,8 @@
 			<div class="col-lg-4 col-md-12 mb-4">
 
 				<!--Modal: Name-->
-				<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-					aria-hidden="true">
-					<div class="modal-dialog modal-lg" role="document">
+				<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="height:auto">
+					<div class="modal-dialog modal-lg" role="document" style="left:-20.85rem">
 
 						<!--Content-->
 						<div class="modal-content">

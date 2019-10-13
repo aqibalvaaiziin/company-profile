@@ -1,5 +1,5 @@
 <section class="sec headImage" data-aos="zoom-in-up">
-	<img src="https://images.pexels.com/photos/288477/pexels-photo-288477.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+	<img src="https://images.pexels.com/photos/1181534/pexels-photo-1181534.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 		alt="">
 	<div class="headIndex">
 		<h1 class="futura-head " style="font-size:3.5rem;">About</h1>

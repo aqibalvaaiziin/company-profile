@@ -16,6 +16,10 @@
         public function index()
         {
             $data['blogs'] = $this->Blog_model->tampilData();
+            if ($this->input->post('keyword')) {
+                # code...
+                $data['blogs'] = $this->Blog_model->cariDataBlog();
+            }
             $this->load->view('user/template/header');
             $this->load->view('user/blog/index',$data);
             $this->load->view('user/template/footer');

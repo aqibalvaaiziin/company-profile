@@ -11,31 +11,29 @@
 
 <section class="newContent sec">
 
-<div class=" d-flex flex-row-reverse justify-content-between" data-aos="fade-right">
+<div class=" d-flex flex-row-reverse justify-content-between mt-5" data-aos="fade-right">
 <div>
-			<form action="" method="post">
-				<div class="input-group md-form form-sm form-2 pl-0">
-					<input class="form-control m-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
-					<div class="input-group-append">
-	
-						<button class="input-group-text red lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
-								aria-hidden="true"></i></button>
-					</div>
-				</div>
-			</form>
+	<form action="" method="post">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Cari Blog" name="keyword">
+			<div class="input-group-append">
+				<button class="btn btn-light border border-left-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</div>
 		</div>
+	</form>
+</div>
 	<?php foreach ($blogs as $blog) : ?>
-		<div class="blogC d-flex flex-row mb-5">
+		<div class="blogC d-flex flex-row mb-5" data-aos="fade-right">
 			<div class="iblog">
 				<img src="<?= base_url().'/uploads/blogs/'.$blog->image?>" alt="lala">
 			</div>
 			<div class="text">
 				<div class="textBoard">
 					<div>
-						<p class="text-muted p-0 m-0"><?= $blog->date ?> &nbsp; <?= $blog->author ?> &nbsp; <i class="fa fa-comment" aria-hidden="true"></i>&nbsp; <?= $blog->view ?></p>
-						<p class="futura-head p-0 m-0" style="font-size:2.5rem"> <?= $blog->title ?></p>
-						<p class="futura-content p-0 text-muted" style="font-size:1rem">
-							<?= str_word_count($blog->desc) > 25 ? substr($blog->desc,0,200)."[...]" : $blog->desc ;?>
+						<p class="text-muted p-0 m-0"><?= $blog->date ?> &nbsp; <?= str_word_count($blog->author) > 5 ? substr($blog->author,0,15)."..." : $blog->author ; ?> &nbsp; <i class="fa fa-comment" aria-hidden="true"></i>&nbsp; <?= $blog->view ?></p>
+						<p class="futura-head p-0 m-0" style="font-size:2.5rem"> <?= str_word_count($blog->title) > 5 ? substr($blog->title,0,25)."..." : $blog->title ; ?></p>
+						<p class="futura-content p-0 text-muted mt-2" style="font-size:1rem">
+							<?= str_word_count($blog->desc) > 25 ? substr($blog->desc,0,250)."..." : $blog->desc ;?>
 						</p>
 					</div>
 					<div>
