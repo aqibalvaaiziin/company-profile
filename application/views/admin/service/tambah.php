@@ -4,7 +4,7 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<h2>Form Tambah Data Blog</h2>
+						<h2>Form Tambah Data Service</h2>
 					</div>
 					<div class="card-body">
 						<?php if(validation_errors()): ?>
@@ -12,27 +12,19 @@
 							<?= validation_errors() ?>
 						</div>
 						<?php endif; ?>
-						<?php echo form_open_multipart('admin/blog/tambah') ?>
+						<?php echo form_open_multipart('admin/service/tambah') ?>
 						<form action="" method="post" enctype="multipart/form-data">
 							<div class="form-group">
-								<label for="">TITLE</label>
-								<input type="text" name="title" class="form-control">
+								<label for="">NAME</label>
+								<input type="text" name="varName" class="form-control">
 							</div>
 							<label for="" class="mt-2">DESC</label>
-							<div class="form-group mb-1">
+							<div class="form-group mt-1">
 								<textarea name="desc" id="" class="form-control" cols="30" rows="10"></textarea>
 							</div>
 							<div class="form-group mt-1">
-								<label for="">DATE</label>
-								<input type="date" name="date" class="form-control">
-							</div>
-							<div class="form-group mt-1">
-								<label for="">AUTHOR</label>
-								<input type="text" name="author" class="form-control">
-							</div>
-							<div class="form-group mt-1">
-								<label for="">VIEW</label>
-								<input type="number" name="view" class="form-control">
+								<label for="">PRICE</label>
+								<input type="number" name="price" class="form-control">
 							</div>
 							<div class="form-group mt-1">
 								<label for="">IMAGE</label>
