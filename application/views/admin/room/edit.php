@@ -41,11 +41,15 @@
 							<input type="number" class="form-control" id="price" name="price"
 								value="<?= $room['price'] ;?>">
 						</div>
+						<label for="desc">DESC</label>
+						<div class="form-group">
+							<textarea class="rounded form-control" name="desc" id="desc"
+								style="width:62.3rem;height:10rem"><?= $room['desc'] ?></textarea>
+						</div>
 						<div class="form-group">
 							<label for="">OLD IMAGE</label>
 							<input type="text" name="tempImg" value="<?= $room['image'];?>" class="form-control mb-3"
 								id="tempImg" readonly>
-
 						</div>
 						<div class="form-group">
 							<label for="">NEW IMAGE</label>

@@ -91,6 +91,10 @@
 	}
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 .navbar {
 	width: 1366px;
 	z-index: 10;

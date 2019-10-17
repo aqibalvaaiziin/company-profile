@@ -22,6 +22,7 @@
                 'type' => $this->input->post('type', true),
                 'service' => $this->input->post('service', true),
                 'price' => $this->input->post('price', true),
+                'desc' => $this->input->post('desc', true),
                 'image' => $upload['file']['file_name'],
             );
             $this->db->insert('room', $data);
@@ -66,6 +67,7 @@
                 'type' => $this->input->post('type', true),
                 'service' => $this->input->post('service', true),
                 'price' => $this->input->post('price', true),
+                'desc' => $this->input->post('desc', true),
                 'image' => $uploads,
             );
             $this->db->where('id', $this->input->post('id'));

@@ -28,6 +28,7 @@
             $this->form_validation->set_rules('type', 'Type', 'required');
             $this->form_validation->set_rules('service', 'Service', 'required');
             $this->form_validation->set_rules('price', 'Price', 'required|numeric');
+            $this->form_validation->set_rules('desc', 'Description', 'required');
             if ($this->form_validation->run() == FALSE) {    
                 $this->load->view('admin/template/header');
                 $this->load->view('admin/template/bar');
@@ -65,6 +66,7 @@
             $this->form_validation->set_rules('people', 'People', 'required');
             $this->form_validation->set_rules('type', 'Type', 'required');
             $this->form_validation->set_rules('service', 'Service', 'required');
+            $this->form_validation->set_rules('desc', 'Description', 'required');
             $this->form_validation->set_rules('price', 'Price', 'required|numeric');
             if ($this->form_validation->run() == FALSE) {    
                 $this->load->view('admin/template/header');
