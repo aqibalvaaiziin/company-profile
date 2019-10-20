@@ -16,7 +16,7 @@
 	width: 750px;
 	height: 620px;
 	background: white;
-    box-shadow: 0px 10px 56px -20px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 10px 56px -20px rgba(0, 0, 0, 0.1);
 	z-index: 7;
 	padding: 30px
 }
@@ -32,6 +32,14 @@
 .decoration img {
 	width: 750px;
 	height: 555px;
+}
+
+.boxFormData {
+	width: inherit;
+	height: 380px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .boxFormData input[type=text],
@@ -62,20 +70,20 @@
 }
 
 .boxFormData select option {
-    background: white;
-    color: #000;
-    border-radius: 3px;
-    padding: 5px;
+	background: white;
+	color: #000;
+	border-radius: 3px;
+	padding: 5px;
 }
 
-.btn-submit{
-    padding: 13px;
-    border: none;
-    border-radius: 3px;
-    width: 50%;
-    font-size: 20px;
-    margin-left: 6rem;
-    background: #f18c8e;
+.btn-submit {
+	padding: 13px;
+	border: none;
+	border-radius: 3px;
+	width: 50%;
+	font-size: 20px;
+	margin-left: 6rem;
+	background: #f18c8e;
 }
 
 
@@ -85,4 +93,34 @@
 	margin-right: 2rem;
 	border-radius: 2px;
 	box-shadow: 0px 10px 30px -20px rgb(0, 0, 0);
+}
+
+
+.boxFormData input[type=date] {
+	position: relative;
+	color: white;
+	margin-top: 22px;
+	height: 5px;
+}
+
+.boxFormData input[type=date]:before {
+	position: absolute;
+	top: -1.4rem;
+	content: attr(data-date);
+	display: inline-block;
+	color: rgb(163, 69, 129);
+}
+
+.boxFormData input[type=date]::-webkit-datetime-edit,
+.boxFormData input[type=date]::-webkit-inner-spin-button,
+.boxFormData input[type=date]::-webkit-clear-button {
+	display: none;
+}
+
+.boxFormData input[type=date]::-webkit-calendar-picker-indicator {
+	position: absolute;
+	right: 0;
+	top: -1.4rem;
+	color: rgb(163, 69, 129);
+	opacity: 1;
 }

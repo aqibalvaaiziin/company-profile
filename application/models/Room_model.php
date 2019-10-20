@@ -9,6 +9,13 @@
             return $value;
         }
 
+        public function tampilDataGroup(){
+            $this->db->group_by('name');
+            $this->db->order_by('id');
+            
+            return $this->db->get('room')->result();
+        }    
+
         public function getDataById($id){
             return $this->db->get_where('room',array('id'=>$id))->row_array();
         }
@@ -22,6 +29,7 @@
                 'type' => $this->input->post('type', true),
                 'service' => $this->input->post('service', true),
                 'price' => $this->input->post('price', true),
+                'status' => $this->input->post('status', true),
                 'desc' => $this->input->post('desc', true),
                 'image' => $upload['file']['file_name'],
             );
@@ -67,6 +75,7 @@
                 'type' => $this->input->post('type', true),
                 'service' => $this->input->post('service', true),
                 'price' => $this->input->post('price', true),
+                'status' => $this->input->post('status', true),
                 'desc' => $this->input->post('desc', true),
                 'image' => $uploads,
             );

@@ -15,6 +15,7 @@
         public function index()
         {
             $data['services'] = $this->service_model->tampilData();
+            $data['packages'] = $this->service_model->tampilDataPaket();
             $this->load->view('user/template/header');
             $this->load->view('user/service/index');
             $this->load->view('user/service/content',$data);

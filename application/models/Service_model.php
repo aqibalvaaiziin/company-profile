@@ -7,6 +7,12 @@
         public function tampilData(){
             return $this->db->get('service')->result();
         }
+
+        public function tampilDataPaket(){
+            $this->db->order_by('id');
+            
+            return $this->db->get('packageservice')->result();
+        }
     
         public function getDataById($id){
             return $this->db->get_where('service',array('id'=>$id))->row_array();
@@ -18,7 +24,6 @@
             $data = array(
                 'name' => $this->input->post('varName',true),
                 'desc' => $this->input->post('desc', true),
-                'price' => $this->input->post('price', true),
                 'image' => $upload['file']['file_name'],
             );
             $this->db->insert('service', $data);
@@ -60,7 +65,6 @@
             $data = array(
                 'name' => $this->input->post('varName',true),
                 'desc' => $this->input->post('desc', true),
-                'price' => $this->input->post('price', true),
                 'image' => $uploads,
             );
             $this->db->where('id', $this->input->post('id'));

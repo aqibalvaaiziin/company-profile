@@ -15,11 +15,15 @@
 						<?php echo form_open_multipart('admin/room/tambah') ?>
 						<form action="" method="post" enctype="multipart/form-data">
 							<div class="form-group">
+								<label for="">NO. KAMAR</label>
+								<input type="text" name="id_room" class="form-control">
+							</div>
+							<div class="form-group">
 								<label for="">NAME</label>
 								<input type="text" name="varName" class="form-control">
 							</div>
-							<label for="" class="mt-2">PEOPLE</label>
-							<div class="form-group mb-1">
+							<label for="">PEOPLE</label>
+							<div class="form-group">
 								<input type="text" name="people" class="form-control">
 							</div>
 							<div class="form-group mt-1">
@@ -37,6 +41,10 @@
 							<label for="" class="mt-1">DESC</label>
 							<div class="form-group mb-1 mb-3">
 								<textarea name="desc" id="" class="form-control" cols="30" rows="10"></textarea>
+							</div>
+							<div class="form-group mt-1">
+								<label for="">Status</label>
+								<input type="text" name="status" class="form-control">
 							</div>
 							<div class="form-group mt-1">
 								<label for="">IMAGE</label>

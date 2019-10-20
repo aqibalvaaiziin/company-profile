@@ -22,10 +22,9 @@
 							<input type="text" class="form-control" id="name" name="varName"
 								value="<?= $room['name'] ;?>">
 						</div>
-						<label for="people">PEOPLE</label>
 						<div class="form-group">
-							<textarea class="rounded form-control" name="people" id="people"
-								style="width:62.3rem;height:10rem"><?= $room['people'] ?></textarea>
+							<label for="people">PEOPLE</label>
+							<input type="text" class="form-control" id="people" name="people" value="<?= $room['people'] ;?>">
 						</div>
 						<div class="form-group">
 							<label for="type">TYPE</label>
@@ -40,6 +39,11 @@
 							<label for="price">PRICE</label>
 							<input type="number" class="form-control" id="price" name="price"
 								value="<?= $room['price'] ;?>">
+						</div>
+						<div class="form-group">
+							<label for="price">STATUS</label>
+							<input type="text" class="form-control" id="status" name="status"
+								value="<?= $room['status'] ;?>">
 						</div>
 						<label for="desc">DESC</label>
 						<div class="form-group">

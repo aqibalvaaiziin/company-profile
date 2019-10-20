@@ -32,12 +32,28 @@
 		<p class="futura-content mt-4 text-muted" style="font-size:1rem">GET THE GOOD EXPERIENCE WITH CHAEP PRICE</p>
 	</div>
 
-	<div class="d-flex flex-row justify-content-between mt-5">
-		<?php foreach ($services as $service):?>
+	<div class="boxDataService d-flex flex-row justify-content-between mt-5" data-aos="zoom-in-up">
+		<?php foreach ($packages as $package):?>
 		<div class="bordereds text-center pb-0 mb-0">
-			<div class="futura-head mb-2 p-3 text-white bg-dark" style="background:#FAFAFA;font-size:30px">
-				<?= $service->name ?></div>
-			<div class="roboto-head font-weight-bolder mb-2" style="font-size:30px">RP. <?= $service->price ?>/Session
+			<div class="futura-head mb-2 p-3 text-white" style="background:#47313F;font-size:30px">
+				<p class="headBox">
+					<?= $package->packageName ?></div>
+				</p>
+			<div class="font-weight-bolder mt-5"> <p style="font-size:35px"> RP. <?= $package->price ?>/Session</p>
+			<table class="futura-content tableDataService text-center w-100 mt-5">
+				<tr class="w-100">
+					<td class="w-100" style="font-size:1.4rem"><?= $package->service1 ?></td>
+				</tr>
+				<tr class="w-100">
+					<td class="w-100" style="font-size:1.4rem"><?= $package->service2 ?></td>
+				</tr>
+				<tr class="w-100">
+					<td class="w-100" style="font-size:1.4rem"><?= $package->service3 ?></td>
+				</tr>
+				<tr class="w-100">
+					<td class="w-100" style="font-size:1.4rem"><?= $package->service4 ?></td>
+				</tr>
+			</table>
 			</div>
 		</div>
 		<?php endforeach ;?>

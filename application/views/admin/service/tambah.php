@@ -23,10 +23,6 @@
 								<textarea name="desc" id="" class="form-control" cols="30" rows="10"></textarea>
 							</div>
 							<div class="form-group mt-1">
-								<label for="">PRICE</label>
-								<input type="number" name="price" class="form-control">
-							</div>
-							<div class="form-group mt-1">
 								<label for="">IMAGE</label>
 								<input type="file" name="image" class="form-control pt-3 pb-5">
 							</div>

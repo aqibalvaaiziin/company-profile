@@ -73,6 +73,7 @@
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
 <script>
 	AOS.init();
 	AOS.init({
@@ -96,6 +97,7 @@
 </script>
 
 <script src="<?= base_url().'/assets/js/carousel.js' ?>"></script>
+<script src="<?= base_url().'/assets/js/date.js' ?>"></script>
 <script src="<?= base_url().'/assets/js/video.js' ?>"></script>
 <script src="<?= base_url().'/assets/js/fixnav.js' ?>"></script>
 </body>

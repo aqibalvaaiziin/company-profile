@@ -15,7 +15,7 @@
 
         public function index()
         {
-            $data['rooms'] = $this->room_model->tampilData();
+            $data['rooms'] = $this->room_model->tampilDataGroup();
             $this->load->view('user/template/header');
             $this->load->view('user/order/index',$data);
             $this->load->view('user/order/room',$data);

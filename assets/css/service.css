@@ -66,3 +66,19 @@
 	border: 4px solid rgba(67, 54, 71, 0.96);
 	width: 18rem;
 }
+
+.headBox{
+	width: 250px;
+	height: 30px;
+}
+
+.tableDataService tr{
+	width: 100%;
+}
+
+
+.tableDataService tr:nth-child(odd){
+	background:  rgba(67, 54, 71, 0.96);
+	color:white
+}
+

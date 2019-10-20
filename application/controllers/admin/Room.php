@@ -28,6 +28,7 @@
             $this->form_validation->set_rules('type', 'Type', 'required');
             $this->form_validation->set_rules('service', 'Service', 'required');
             $this->form_validation->set_rules('price', 'Price', 'required|numeric');
+            $this->form_validation->set_rules('status', 'Status', 'required');
             $this->form_validation->set_rules('desc', 'Description', 'required');
             if ($this->form_validation->run() == FALSE) {    
                 $this->load->view('admin/template/header');

@@ -27,12 +27,7 @@
 							<textarea class="rounded form-control" name="desc" id="desc"
 								style="width:62.3rem;height:10rem"><?= $service['desc'] ?></textarea>
 						</div>
-			
-						<div class="form-group">
-							<label for="price">PRICE</label>
-							<input type="number" class="form-control" id="price" name="price"
-								value="<?= $service['price'] ;?>">
-						</div>
+						
 						<div class="form-group">
 							<label for="">OLD IMAGE</label>
 							<input type="text" name="tempImg" value="<?= $service['image'];?>" class="form-control mb-3"

@@ -12,11 +12,9 @@
         <tr>
           <th scope="col" style="width:1%">ROOM_ID</th>
           <th scope="col" style="width:12%">NAME</th>
-          <th scope="col" style="width:12%">PEOPLE</th>
           <th scope="col" style="width:10%">TYPE</th>
-          <th scope="col" style="width:10%">SERVICE</th>
           <th scope="col" style="width:10%">PRICE</th>
-          <th scope="col" style="width:10%">DESC</th>
+          <th scope="col" style="width:10%">STATUS</th>
           <th scope="col" style="width:10%">IMAGE</th>
           <th scope="col" style="width:16%">ACTION</th>
         </tr>
@@ -27,11 +25,9 @@
           <tr>
             <td><?php echo $room->id; ?></td>
             <td><?php echo str_word_count($room->name) > 5 ? substr($room->name,0,10)."[...]" : $room->name ; ?></td>
-            <td><?php echo str_word_count($room->people) > 5 ? substr($room->people,0,10)."[...]" : $room->people ; ?></td>
             <td><?php echo str_word_count($room->type) > 5 ? substr($room->type,0,10)."[...]" : $room->type ; ?></td>
-            <td><?php echo str_word_count($room->service) > 5 ? substr($room->service,0,10)."[...]" : $room->service ; ?></td>
             <td>Rp.<?php echo str_word_count($room->price) > 5 ? substr($room->price,0,10)."[...]" : $room->price ; ?></td>
-            <td><?php echo str_word_count($room->desc) > 5 ? substr($room->desc,0,10)."[...]" : $room->desc ; ?></td>
+            <td><?php echo str_word_count($room->status) > 5 ? substr($room->status,0,10)."[...]" : $room->status ; ?></td>
             <td><?php echo str_word_count($room->image) > 5 ? substr($room->image,0,10)."[...]" : $room->image ; ?></td>
             <td>
             <a href="<?= base_url(); ?>admin/room/detail/<?= $room->id ;?>" class="btn btn-primary">

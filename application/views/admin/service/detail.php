@@ -23,10 +23,7 @@
 							</p>
 						</div>
 					</div>
-					<p class="card-text">
-						<label for=""><b>PRICE <span style="margin-left:4rem">:</span> </b></label>
-						<?= $service['price']; ?>
-					</p>
+					
 					<p class="card-text">
 						<label for=""><b>IMAGE <span style="margin-left:3.7rem">:</span> </b></label>
 					</p>

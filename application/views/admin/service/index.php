@@ -10,22 +10,21 @@
     <table class="table" id="myTable">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">ID</th>
+          <th scope="col">NO</th>
           <th scope="col">NAME</th>
           <th scope="col">DESC</th>
-          <th scope="col">PRICE</th>
           <th scope="col">IMAGE</th>
           <th scope="col">ACTION</th>
         </tr>
       </thead>
     
       <tbody>
+        <?php $no = 1;?>
         <?php foreach($services as $service): ?>
           <tr>
-            <td><?php echo $service->id; ?></td>
+            <td><?php echo $no; ?></td>
             <td><?php echo str_word_count($service->name) > 25 ? substr($service->name,0,20)."[...]" : $service->name ; ?></td>
             <td><?php echo str_word_count($service->desc) > 25 ? substr($service->desc,0,20)."[...]" : $service->desc ; ?></td>
-            <td><?php echo str_word_count($service->price) > 25 ? substr($service->price,0,20)."[...]" : $service->price ; ?></td>
             <td><?php echo str_word_count($service->image) > 25 ? substr($service->image,0,20)."[...]" : $service->image ; ?></td>
             <td>
             <a href="<?= base_url(); ?>admin/service/detail/<?= $service->id ;?>" class="btn btn-primary">
@@ -39,6 +38,7 @@
               </a>
             </td>
           </tr>
+          <?php $no++;?>
         <?php endforeach; ?>
       </tbody>
     

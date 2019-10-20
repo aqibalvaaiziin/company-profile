@@ -25,7 +25,6 @@
         {
             $this->form_validation->set_rules('varName', 'Name', 'required');
             $this->form_validation->set_rules('desc', 'Description', 'required');
-            $this->form_validation->set_rules('price', 'Price', 'required|numeric');
             if ($this->form_validation->run() == FALSE) {    
                 $this->load->view('admin/template/header');
                 $this->load->view('admin/template/bar');
@@ -59,7 +58,6 @@
             $data['service']=$this->service_model->getDataById($id);
             $this->form_validation->set_rules('varName', 'Name', 'required');
             $this->form_validation->set_rules('desc', 'Description', 'required');
-            $this->form_validation->set_rules('price', 'Price', 'required|numeric');
             if ($this->form_validation->run() == FALSE) {    
                 $this->load->view('admin/template/header');
                 $this->load->view('admin/template/bar');
