@@ -40,10 +40,22 @@
         }
 
         public function tambah(){
-            $this->order_model->tambah();
-            
+            $this->order_model->tambahDataOrder();
+            $data = array(
+                "dataku" => array(
+                    "nama" => "Bill",
+                    "url" => "http://petanikode.com",
+                    "allData" => $this->order_model->cetakLaporan()   
+                )
+            );
+        
+            $this->load->library('pdf');
+        
+            $this->pdf->setPaper('A4', 'potrait');
+            $this->pdf->filename = "Bill.pdf";
+            $this->pdf->load_view('user/order/laporan', $data);
+
             redirect('user/order','refresh');
-            
         }
     
     }

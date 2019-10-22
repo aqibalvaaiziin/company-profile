@@ -14,7 +14,8 @@
 		<div class="align-self-center formBox text-center">
 			
 			<h4 class="roboto-head font-weight-bolder pacifico-content" style="color:rgb(163, 69, 119)">Booking</h4>
-			<h2 class="futra-head mt-3 font-weight-bolder">Make a Declination </h2>
+			<h2 class="futra-head mt-3 font-weight-bolder">Make a Order </h2>
+			<?php echo form_open('user/order/tambah'); ?>
 			<form action="" method="post">
 			<div class="boxFormData d-flex flex-column justify-content-between mt-5">
 				<input type="hidden" name="custId" value="<?php echo (rand(10,1000)); ?>">
@@ -24,13 +25,14 @@
 				<input type="text" class="futura-content" placeholder="Date For Order" onfocus="(this.type='date')" data-date="" data-date-format="DD MMMM YYYY" id="orderDate" name="dateOrder">
 
 					<select name="roomName" id="roomName" class=" futura-content">
+					<option value="">Room Type</option>
 					<?php foreach ($roomsInput as $room) : ?>
 						<option value="<?= $room->name ?>"><?= $room->name ?></option>
 					<?php endforeach;?>
 					</select>
 
 					<select name="roomNumber" id="roomNumber" class=" futura-content">
-						<option value="">No Kamar</option>
+						<option value="">Room Number</option>
 					</select>
 
 					<p class="futura-content" id="loading">Loading ... </p>	
@@ -38,12 +40,13 @@
 					<select name="service" id="service"  class=" futura-content">
 					<option value="-">No Package</option>
 					<?php foreach ($services as $service):?>
-						<option value="<?= $service->id ?>"><?= $service->packageName ?></option>
+						<option value="<?= $service->id ?>"><?= $service->packageName ?></option> 
 					<?php endforeach; ?>
 					</select>
                 <button type="submit" class="btn-submit text-white futura-head">Make an Order</button>
 			</div>
 		</form>
+		<?php form_close(); ?>
 		</div>
 		<div class="align-self-start decoration">
 			<img src="https://images.pexels.com/photos/919/night-dark-hotel-luxury.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"

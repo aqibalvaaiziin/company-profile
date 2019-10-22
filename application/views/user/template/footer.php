@@ -86,14 +86,14 @@
     // Kita sembunyikan dulu untuk loadingnya
     $("#loading").hide();
     
-    $("#roomName").change(function(){ // Ketika user mengganti atau memilih data roomName
-      $("#roomNumber").hide(); // Sembunyikan dulu combobox roomNumber nya
-      $("#loading").show(); // Tampilkan loadingnya
+    $("#roomName").change(function(){ 
+      $("#roomNumber").hide();
+      $("#loading").show();
     
 		$.ajax({
-			type: "POST", // Method pengiriman data bisa dengan GET atau POST
-			url: "<?php echo base_url().'user/order/listAvailable'; ?>", // Isi dengan url/path file php yang dituju
-			data: {roomName : $("#roomName").val()}, // data yang akan dikirim ke file yang dituju
+			type: "POST",
+			url: "<?php echo base_url().'user/order/listAvailable'; ?>", 
+			data: {roomName : $("#roomName").val()},
 			dataType: "json",
 			beforeSend: function(e) {
 			if(e && e.overrideMimeType) {
@@ -106,7 +106,7 @@
 					// set isi dari combobox roomNumber
 					// lalu munculkan kembali combobox roomNumbernya
 					$("#roomNumber").html(response.list_status).show();
-				}, 3000);
+				}, 2000);
 			},
 			error: function (xhr, ajaxOptions, thrownError) { // Ketika ada error
 			alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError); // Munculkan alert error

@@ -28,38 +28,57 @@
         $this->db->select('room.*,statusRoom.status');
         $this->db->from('room');
         $this->db->join('statusRoom', 'room.id = statusRoom.id_room');
-        $this->db->where(array('statusRoom.status'=>'Available','room.name' => $name));    
+        $this->db->where(array('statusRoom.status'=>'Available','room.name' => $name));  
+      
         $query = $this->db->get()->result();
         return $query;
     }  
 
-      public function getTotal(){
-        $this->db->select('orders.*,room.price,packageservice.price,sum(room.price+packageservice.price)');
-        $this->db->from('orders');
-        $this->db->join('room', 'orders.idRoom = room.id');
-        $this->db->join('room', 'orders.idService = packageservice.id');
-        
-        
-        
-      }
 
-      public function tambahDataOrder(){
+    public function tambahDataOrder(){       
+        $data2 = array(
+          'id' => $this->input->post('custId'),
+          'name' => $this->input->post('custName'),
+          'address' => $this->input->post('custAdd'),
+          'telephone'=> $this->input->post('custTelp')
+        );
+        $this->db->insert('customer', $data2);
 
-        
-          $data = array(
-            'idCust' => $this->input->post('custId'),
-            'idRoom' => $this->input->post('roomNumber'),
-            'idService' => $this->input->post('service'),
-            'date'  => $this->input->post('dateOrder')
-          );
-      }
+        $data = array(
+          'idCust' => $this->input->post('custId'),
+          'idRoom' => $this->input->post('roomNumber'),
+          'idService' => $this->input->post('service'),
+          'date' => $this->input->post('dateOrder')
+        );
+        $this->db->insert('orders', $data);
+        $dataTotal = $this->db->query(
+          'SELECT t1.*,t2.price,t3.price, sum(t2.price + t3.price) as subtotal from orders t1 join room t2 on t1.idRoom = t2.id join packageservice t3 on t1.idService = t3.id  group by t1.id order by t1.id desc limit 1'
+        )->result();;
+          foreach($dataTotal as $st){
+            $subt = $st->subtotal;
+            $idOrd = $st->id; 
+          }
+          $this->db->where('id', $idOrd);
+          $this->db->update('orders', array('total' => $subt));
+          
+          
+          $this->db->where('id_room', $data['idRoom']);
+          $this->db->update('statusRoom', array('status' => 'Not Available'));
 
-      public function tambahDataCustomer(){
+    }
 
-      }
 
       public function cetakLaporan(){
-
+        $this->db->select('orders.date,orders.total,customer.name as cn,customer.address,customer.telephone,packageservice.*,room.name as rn,room.type');
+        $this->db->from('orders');
+        $this->db->join('customer', 'orders.idCust = customer.id');
+        $this->db->join('packageservice', 'orders.idService = packageservice.id');
+        $this->db->join('room', 'orders.idRoom = room.id');
+        $this->db->group_by('orders.id');
+        $this->db->order_by('orders.id', 'desc');
+        $this->db->limit(1);
+        $query = $this->db->get();
+        return $query->result();
       }
 
     }
