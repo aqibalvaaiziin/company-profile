@@ -106,7 +106,7 @@
 .boxFormData input[type=date]:before {
 	position: absolute;
 	top: -1.4rem;
-	content: attr(data-date);
+	content: 'DD/MM/YYYY';
 	display: inline-block;
 	color: rgb(163, 69, 129);
 }

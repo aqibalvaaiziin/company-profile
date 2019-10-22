@@ -83,6 +83,27 @@
             $this->db->update('room', $data);
             }
 
+            public function availableRoom(){
+                if($_GET['roomName'] == 'Premium Single'){
+                    return $this->db->get_where('room',array('status'=>'Available','name'=>'Premium Single'))->result();
+                }
+                else if($_GET['roomName'] == 'Premium Double'){
+                    return $this->db->get_where('room',array('status'=>'Available','name'=>'Premium Double'))->result();
+                }
+                else if($_GET['roomName'] == 'Premium Duluxe'){
+                    return $this->db->get_where('room',array('status'=>'Available','name'=>'Premium Duluxe'))->result();
+                }
+                else if($_GET['roomName'] == 'Premium Family'){
+                    return $this->db->get_where('room',array('status'=>'Available','name'=>'Premium Family'))->result();
+                }
+            }
+        
+            public function getDataService(){
+                $this->db->order_by('id', 'desc');
+                return $this->db->get('packageservice')->result();
+                
+            }
+
     }
     
     /* End of file room_model.php */

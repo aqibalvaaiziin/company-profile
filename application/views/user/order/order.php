@@ -22,10 +22,20 @@
 				<input type="text" class="futura-content" placeholder="Phone Number">
 				<input type="text" class="futura-content" placeholder="Date For Order" onfocus="(this.type='date')" data-date="" data-date-format="DD MMMM YYYY" id="orderDate">
 			
-					<select name="jurusan" id="jurusan" class=" futura-content">
+					<select name="roomName" id="room" class=" futura-content">
 					<?php foreach ($rooms as $room) : ?>
 						<option value="<?= $room->name ?>"><?= $room->name ?></option>
 					<?php endforeach;?>
+					</select>
+					<select name="id_room" id="id_room" class=" futura-content">
+					<?php foreach ($availables as $available) : ?>
+						<option value="<?= $available->id ?>"><?= $available->id ?></option>
+					<?php endforeach;?>
+					</select>
+					<select name="service" id="service"  class=" futura-content">
+					<?php foreach ($services as $service):?>
+						<option value="<?= $service->id ?>"><?= $service->packageName ?></option>
+					<?php endforeach; ?>
 					</select>
                 <button type="submit" class="btn-submit text-white futura-head">Make an Order</button>
 			</div>
