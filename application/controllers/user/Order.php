@@ -8,21 +8,42 @@
         public function __construct()
         {
             parent::__construct();
-            $this->load->model('room_model');
+            $this->load->model('order_model');
+
             
         }
         
 
         public function index()
         {
-            $data['rooms'] = $this->room_model->tampilDataGroup();
-            $data['services'] = $this->room_model->getDataService();
-            $data['availables'] = $this->room_model->availableRoom();
+            $data['rooms'] = $this->order_model->tampilDataGroup();
+            $data['roomsInput'] = $this->order_model->tampilDataGroup();
+            $data['services'] = $this->order_model->getDataService();
             $this->load->view('user/template/header');
             $this->load->view('user/order/index',$data);
             $this->load->view('user/order/room',$data);
             $this->load->view('user/order/order',$data);
             $this->load->view('user/template/footer');
+        }
+
+        public function listAvailable(){
+            $roomName = $this->input->post('roomName');
+            $status = $this->order_model->dataKamar($roomName);
+            $lists = "<option value=''>Room Number</option>";
+
+            foreach($status as $data){
+                $lists .= "<option value='".$data->id."'>".$data->id."</option>";
+            }
+            
+            $callback = array('list_status'=>$lists);
+            echo json_encode($callback);
+        }
+
+        public function tambah(){
+            $this->order_model->tambah();
+            
+            redirect('user/order','refresh');
+            
         }
     
     }

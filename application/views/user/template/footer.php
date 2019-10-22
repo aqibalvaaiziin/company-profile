@@ -62,10 +62,10 @@
 	</p>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-</script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
 </script>
@@ -74,32 +74,49 @@
 </script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
-<script>
-	AOS.init();
-	AOS.init({
-		disable: false,
-		startEvent: 'DOMContentLoaded',
-		initClassName: 'aos-init',
-		animatedClassName: 'aos-animate',
-		useClassNames: false,
-		disableMutationObserver: false,
-		debounceDelay: 50,
-		throttleDelay: 99,
-		offset: 150,
-		delay: 0,
-		duration: 600,
-		easing: 'ease',
-		once: false,
-		mirror: false,
-		anchorPlacement: 'top-bottom',
-	});
-
-</script>
 
 <script src="<?= base_url().'/assets/js/carousel.js' ?>"></script>
 <script src="<?= base_url().'/assets/js/date.js' ?>"></script>
+<script src="<?= base_url().'/assets/js/aos.js' ?>"></script>
 <script src="<?= base_url().'/assets/js/video.js' ?>"></script>
 <script src="<?= base_url().'/assets/js/fixnav.js' ?>"></script>
+
+<script>
+	$(document).ready(function(){ // Ketika halaman sudah siap (sudah selesai di load)
+    // Kita sembunyikan dulu untuk loadingnya
+    $("#loading").hide();
+    
+    $("#roomName").change(function(){ // Ketika user mengganti atau memilih data roomName
+      $("#roomNumber").hide(); // Sembunyikan dulu combobox roomNumber nya
+      $("#loading").show(); // Tampilkan loadingnya
+    
+		$.ajax({
+			type: "POST", // Method pengiriman data bisa dengan GET atau POST
+			url: "<?php echo base_url().'user/order/listAvailable'; ?>", // Isi dengan url/path file php yang dituju
+			data: {roomName : $("#roomName").val()}, // data yang akan dikirim ke file yang dituju
+			dataType: "json",
+			beforeSend: function(e) {
+			if(e && e.overrideMimeType) {
+				e.overrideMimeType("application/json;charset=UTF-8");
+			}
+			},
+			success: function(response){ // Ketika proses pengiriman berhasil
+				setTimeout(() => {
+					$("#loading").hide(); // Sembunyikan loadingnya
+					// set isi dari combobox roomNumber
+					// lalu munculkan kembali combobox roomNumbernya
+					$("#roomNumber").html(response.list_status).show();
+				}, 3000);
+			},
+			error: function (xhr, ajaxOptions, thrownError) { // Ketika ada error
+			alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError); // Munculkan alert error
+			}
+		});
+		});
+	});
+</script>
+
+
 </body>
 
 </html>

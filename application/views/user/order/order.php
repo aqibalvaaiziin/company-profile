@@ -17,22 +17,26 @@
 			<h2 class="futra-head mt-3 font-weight-bolder">Make a Declination </h2>
 			<form action="" method="post">
 			<div class="boxFormData d-flex flex-column justify-content-between mt-5">
-				<input type="text" class="futura-content" placeholder="Name">
-				<input type="text" class="futura-content" placeholder="Address">
-				<input type="text" class="futura-content" placeholder="Phone Number">
-				<input type="text" class="futura-content" placeholder="Date For Order" onfocus="(this.type='date')" data-date="" data-date-format="DD MMMM YYYY" id="orderDate">
-			
-					<select name="roomName" id="room" class=" futura-content">
-					<?php foreach ($rooms as $room) : ?>
+				<input type="hidden" name="custId" value="<?php echo (rand(10,1000)); ?>">
+				<input type="text" class="futura-content" placeholder="Name" name="custName">
+				<input type="text" class="futura-content" placeholder="Address" name="custAdd">
+				<input type="text" class="futura-content" placeholder="Phone Number" name="custTelp">
+				<input type="text" class="futura-content" placeholder="Date For Order" onfocus="(this.type='date')" data-date="" data-date-format="DD MMMM YYYY" id="orderDate" name="dateOrder">
+
+					<select name="roomName" id="roomName" class=" futura-content">
+					<?php foreach ($roomsInput as $room) : ?>
 						<option value="<?= $room->name ?>"><?= $room->name ?></option>
 					<?php endforeach;?>
 					</select>
-					<select name="id_room" id="id_room" class=" futura-content">
-					<?php foreach ($availables as $available) : ?>
-						<option value="<?= $available->id ?>"><?= $available->id ?></option>
-					<?php endforeach;?>
+
+					<select name="roomNumber" id="roomNumber" class=" futura-content">
+						<option value="">No Kamar</option>
 					</select>
+
+					<p class="futura-content" id="loading">Loading ... </p>	
+
 					<select name="service" id="service"  class=" futura-content">
+					<option value="-">No Package</option>
 					<?php foreach ($services as $service):?>
 						<option value="<?= $service->id ?>"><?= $service->packageName ?></option>
 					<?php endforeach; ?>

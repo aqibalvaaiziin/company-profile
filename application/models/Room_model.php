@@ -5,8 +5,12 @@
     class room_model extends CI_Model {
     
         public function tampilData(){
-            $value = $this->db->get('room')->result();
-            return $value;
+            $this->db->select('room.*,statusRoom.status');
+            $this->db->from('room');
+            $this->db->join('statusRoom', 'room.id = statusRoom.id_room');
+            $value = $this->db->get();
+            
+            return $value->result();
         }
 
         public function tampilDataGroup(){
@@ -16,8 +20,13 @@
             return $this->db->get('room')->result();
         }    
 
-        public function getDataById($id){
-            return $this->db->get_where('room',array('id'=>$id))->row_array();
+        public function getDataById($id){ $this->db->select('room.*,statusRoom.status');
+            $this->db->from('room');
+            $this->db->join('statusRoom', 'room.id = statusRoom.id_room');
+            $this->db->where('room.id', $id);
+            
+            $value = $this->db->get();
+            return $value->row_array();
         }
     
         
@@ -29,7 +38,6 @@
                 'type' => $this->input->post('type', true),
                 'service' => $this->input->post('service', true),
                 'price' => $this->input->post('price', true),
-                'status' => $this->input->post('status', true),
                 'desc' => $this->input->post('desc', true),
                 'image' => $upload['file']['file_name'],
             );
@@ -75,28 +83,18 @@
                 'type' => $this->input->post('type', true),
                 'service' => $this->input->post('service', true),
                 'price' => $this->input->post('price', true),
-                'status' => $this->input->post('status', true),
                 'desc' => $this->input->post('desc', true),
                 'image' => $uploads,
             );
+            $statusEdit = array('status'=>$this->input->post('status', true));
+
+            $this->db->where('id_Room', $this->input->post('id'));
+            $this->db->update('statusRoom', $statusEdit);
+
             $this->db->where('id', $this->input->post('id'));
             $this->db->update('room', $data);
             }
 
-            public function availableRoom(){
-                if($_GET['roomName'] == 'Premium Single'){
-                    return $this->db->get_where('room',array('status'=>'Available','name'=>'Premium Single'))->result();
-                }
-                else if($_GET['roomName'] == 'Premium Double'){
-                    return $this->db->get_where('room',array('status'=>'Available','name'=>'Premium Double'))->result();
-                }
-                else if($_GET['roomName'] == 'Premium Duluxe'){
-                    return $this->db->get_where('room',array('status'=>'Available','name'=>'Premium Duluxe'))->result();
-                }
-                else if($_GET['roomName'] == 'Premium Family'){
-                    return $this->db->get_where('room',array('status'=>'Available','name'=>'Premium Family'))->result();
-                }
-            }
         
             public function getDataService(){
                 $this->db->order_by('id', 'desc');
