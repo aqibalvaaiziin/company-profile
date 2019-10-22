@@ -42,10 +42,10 @@
         public function tambah(){
             $this->order_model->tambahDataOrder();
             $data = array(
+                "allData" => $this->order_model->cetakLaporan(),   
                 "dataku" => array(
                     "nama" => "Bill",
                     "url" => "http://petanikode.com",
-                    "allData" => $this->order_model->cetakLaporan()   
                 )
             );
         
