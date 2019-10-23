@@ -29,21 +29,26 @@
             $this->load->view('admin/template/footer');
         }
 
-        public function edit($id){
-        $data ['orders'] = $this->order_model->getDataById($id);
-        $this->form_validation->set_rules('id_room', 'ID_ROOM', 'required');
-        $this->form_validation->set_rules('date', 'Date', 'required');
-        $this->form_validation->set_rules('total', 'Total', 'required');
-        if ($this->form_validation->run() == FALSE) {
-            # code...
-            $this->load->view('admin/template/header',$data);
-            $this->load->view('admin/order/edit',$data);
-            $this->load->view('admin/template/footer');
-        } else {
-            # code...
-            $this->order_model->editData();
-            redirect('admin/order','refresh');
+        public function edit($id)
+        {
+            $data['order']=$this->order_model->getDataByIdEdit($id);
+            $this->form_validation->set_rules('date', 'Date', 'required');
+            if ($this->form_validation->run() == FALSE) {    
+                $this->load->view('admin/template/header');
+                $this->load->view('admin/template/bar');
+                $this->load->view('admin/order/edit',$data);
+                $this->load->view('admin/template/footer');
+                
+            } else {
+                $this->order_model->editData($id);
+                redirect('admin/order/');
+                }
         }
+
+        public function hapus($id){
+            $this->order_model->hapusData($id);
+            $this->session->set_flashdata('flash-data', 'dihapus');
+            redirect('admin/order','refresh');     
         }
     
     }

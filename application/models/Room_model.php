@@ -99,7 +99,7 @@
             public function getDataService(){
                 $this->db->order_by('id', 'desc');
                 return $this->db->get('packageservice')->result();
-                
+        
             }
 
     }

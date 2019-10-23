@@ -1,6 +1,6 @@
 <div class="sec" data-aos="fade-down" style="padding:0" >
 	<h2 class="text-center futura-head">
-		ALL ABOUT HOTEL BOROBUDUR JAKARTA, INDONESIA
+		ALL ABOUT HOTEL SANTIKA, INDONESIA
 	</h2>
 </div>
 <div class="sec" data-aos="fade-down">

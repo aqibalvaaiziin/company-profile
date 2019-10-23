@@ -1,10 +1,27 @@
+<?php
+    if (empty($this->session->userdata('user'))) {
+        redirect('login');
+    }
+?>
 <div class="topBar">
 
 	<div id="sidebar">
-		<div class="menubar">
-			<span></span>
-			<span></span>
-			<span></span>
+
+		<div class="menubar d-flex flex-row justify-content-between" >
+			<div class="rowBar">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="dropdown">
+				<button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false" >
+					<i class="fa fa-user" aria-hidden="true"></i><?php echo $this->session->flashdata('user');?>
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="<?= base_url().'login/logout' ?>" onClick="return confirm('Apakah kamu yakin akan keluar dari akun ini ??');">Log Out</a>
+				</div>
+			</div>
 		</div>
 		<div class="card bg-dark text-white rounded-0" style="height:61.5rem">
 			<div class="card-header">
@@ -59,4 +76,4 @@
 		</div>
 	</div>
 
-</div>	
+</div>

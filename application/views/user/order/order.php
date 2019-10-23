@@ -18,7 +18,7 @@
 			<?php echo form_open('user/order/tambah'); ?>
 			<form action="" method="post">
 			<div class="boxFormData d-flex flex-column justify-content-between mt-5">
-				<input type="hidden" name="custId" value="<?php echo (rand(10,1000)); ?>">
+				<input type="hidden" name="custId" value="<?php echo uniqid(); ?>">
 				<input type="text" class="futura-content" placeholder="Name" name="custName">
 				<input type="text" class="futura-content" placeholder="Address" name="custAdd">
 				<input type="text" class="futura-content" placeholder="Phone Number" name="custTelp">
@@ -43,7 +43,7 @@
 						<option value="<?= $service->id ?>"><?= $service->packageName ?></option> 
 					<?php endforeach; ?>
 					</select>
-                <button type="submit" class="btn-submit text-white futura-head">Make an Order</button>
+                <button type="submit" class="btn-submit text-white futura-head" onClick="return confirm('Kamu akan diarahkan ke halaman lain untuk mencetak hasil ordermu');">Make an Order</button>
 			</div>
 		</form>
 		<?php form_close(); ?>

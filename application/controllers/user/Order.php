@@ -42,19 +42,18 @@
         public function tambah(){
             $this->order_model->tambahDataOrder();
             $data = array(
-                "allData" => $this->order_model->cetakLaporan(),   
+                "allData" => $this->order_model->cetakLaporan(),
                 "dataku" => array(
-                    "nama" => "Bill",
-                    "url" => "http://petanikode.com",
+                    "nama" => "Petani Kode",
+                    "url" => "http://petanikode.com"
                 )
             );
-        
-            $this->load->library('pdf');
+            
         
             $this->pdf->setPaper('A4', 'potrait');
-            $this->pdf->filename = "Bill.pdf";
+            $this->pdf->filename = "laporan-petanikode.pdf";
             $this->pdf->load_view('user/order/laporan', $data);
-
+        
             redirect('user/order','refresh');
         }
     

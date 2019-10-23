@@ -10,9 +10,20 @@
       
 
       public function getDataById($id){
+        $this->db->select('orders.date,orders.total,customer.name as cn,customer.address,customer.telephone,packageservice.*,room.name as rn,room.type,room.id as ri');
+        $this->db->from('orders');
+        $this->db->join('customer', 'orders.idCust = customer.id');
+        $this->db->join('packageservice', 'orders.idService = packageservice.id');
+        $this->db->join('room', 'orders.idRoom = room.id');
+        $this->db->where('orders.id', $id);
+      
+        return $this->db->get()->result();  
+      }
+
+      public function getDataByIdEdit($id){
         return $this->db->get_where('orders',array('id'=>$id))->row_array();
       }
-      
+
       public function getDataService(){
         $this->db->order_by('id', 'desc');
         return $this->db->get('packageservice')->result();
@@ -68,8 +79,9 @@
     }
 
 
+
       public function cetakLaporan(){
-        $this->db->select('orders.date,orders.total,customer.name as cn,customer.address,customer.telephone,packageservice.*,room.name as rn,room.type');
+        $this->db->select('orders.date,orders.total,customer.name as cn,customer.address,customer.telephone,packageservice.*,room.name as rn,room.type,room.id as ri');
         $this->db->from('orders');
         $this->db->join('customer', 'orders.idCust = customer.id');
         $this->db->join('packageservice', 'orders.idService = packageservice.id');
@@ -80,6 +92,20 @@
         $query = $this->db->get();
         return $query->result();
       }
+
+
+      public function editData($id){
+        $data = array(
+          'date' => $this->input->post('date',true),
+      );
+      $this->db->where('id',$id);
+      $this->db->update('orders', $data);
+      }
+
+      public function hapusData($id){
+        return $this->db->delete('orders',array('id' => $id));
+    }
+
 
     }
     
