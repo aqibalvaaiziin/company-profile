@@ -65,11 +65,8 @@
         public function upload(){    
           $config['upload_path'] = './uploads/blogs/';    
           $config['allowed_types'] = 'jpg|png|jpeg|gif';
-
           $this->load->library('upload', $config);
-
           if($this->upload->do_upload('image')){
-              
               $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');      
               return $return;
           }else{    

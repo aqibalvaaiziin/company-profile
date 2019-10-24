@@ -63,6 +63,12 @@
 						</a>
 					</li>
 					<li class="nav-item">
+						<a href="<?= base_url().'admin/admin' ?>" class="nav-link active text-white">
+							<i class="fa fa-user" aria-hidden="true"></i> &nbsp;
+							<span> Admin </span>
+						</a>
+					</li>
+					<li class="nav-item">
 						<a href="<?= base_url().'user/home' ?>" class="nav-link active text-white av mt-5">
 							<i class="fas fa-arrow-alt-circle-left" aria-hidden="true"></i> &nbsp;
 							<span> Go To User </span>

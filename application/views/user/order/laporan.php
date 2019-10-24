@@ -22,7 +22,8 @@
 			<span style="margin-left:1rem">Terima kasih atas</span> pemesanan yang telah anda lakukan mohon untuk segera
 			konfirmasi untuk pemesanan anda,
 			batas waktu maksimal untuk melakukan konfirmasi adalah 3 hari, jika laporan tidak dikonfirmasi dalam 3
-			hari maka pemesanan anda akan otomatis dihapus oleh sistem.
+			hari maka pemesanan anda akan otomatis dihapus oleh sistem,dalam transaksi ini anda hanya dapat melakukan 
+			perubahan pemesanan pada tanggal pemesanan dengan konfirmasi kepada petugas kami untuk kenyamanan anda. 
 		</p>
 		<br>
 		<p>Berikut data pemesanan yang anda lakukan : </p>

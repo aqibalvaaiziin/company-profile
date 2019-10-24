@@ -9,6 +9,7 @@
       $this->db->from('admin');
       $this->db->where('username',$username);
       $this->db->where('password',$password);
+      $this->db->where('status','Active');
       $this->db->limit(1);
       $query = $this->db->get();
       if ($query->num_rows() == 0) {
