@@ -20,10 +20,29 @@
       $this->db->update('admin', $data);  
     }
 
+    public function editData($id){
+      $data = array(
+        'username' => $this->input->post('username',true),
+        'password' => $this->input->post('password',true),
+        'refCode' => $this->input->post('refCode',true),  
+      );
+      $this->db->where('id', $id);
+      $this->db->update('admin', $data);      
+    }
+
+    public function getDataByIdEdit($id){
+      return $this->db->get_where('admin',array('id'=>$id))->row_array();
+    }
+  
     public function getDataById($id){
       return $this->db->get_where('admin',array('id'=>$id))->result();
     }
-  
+
+    public function deletData($id){
+      $this->db->where('id', $id);
+      return $this->db->delete('admin');
+      
+    }
   }
   
   /* End of file admin_model.php */

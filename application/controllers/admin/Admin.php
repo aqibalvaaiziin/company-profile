@@ -21,6 +21,32 @@
       $this->load->view('admin/template/footer');
     }
 
+    public function hapus($id){
+      $this->admin_model->deletData($id);
+      
+      redirect('admin/admin','refresh');
+      
+    }
+
+    public function edit($id)
+    {
+        $data['admin']=$this->admin_model->getDataByIdEdit($id);
+        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        $this->form_validation->set_rules('refCode', 'Reference Code', 'required');
+        if ($this->form_validation->run() == FALSE) {    
+            $this->load->view('admin/template/header');
+            $this->load->view('admin/template/bar');
+            $this->load->view('admin/admin/edit',$data);
+            $this->load->view('admin/template/footer');
+            
+        } else {
+            $this->admin_model->editData($id);
+            redirect('admin/admin');
+            }
+    }
+
+
     public function changeStatus($id){
       $cek = $this->admin_model->getDataById($id);
       foreach($cek as $c){

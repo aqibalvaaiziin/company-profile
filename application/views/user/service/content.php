@@ -8,9 +8,9 @@
 		<p class="futura-content mt-4 text-muted" style="font-size:1rem">WE HAVE MUCH SERVICE TO MAKE YOU SATISFIED</p>
 	</div>
 
-	<div class="d-flex flex-row flex-lg-wrap mt-5 mb-5 justify-content-between" data-aos="zoom-in-down">
+	<div class="d-flex flex-row flex-lg-wrap mt-5 mb-5 justify-content-center" data-aos="zoom-in-down">
 		<?php foreach ($services as $service): ?>
-		<div class="serviceContent rounded mb-5">
+		<div class="serviceContent rounded mb-3 ml-4 mr-4">
 			<img src="<?= base_url().'uploads/services/'.$service->image ?>" alt="">
 			<div class="d-flex">
 				<p class="futura-content font-weight-normal textboard"><?= $service->name ?></p>
@@ -39,19 +39,19 @@
 				<p class="headBox">
 					<?= $package->packageName ?></div>
 				</p>
-			<div class="font-weight-bolder mt-5"> <p style="font-size:35px"> RP. <?= $package->price ?>/Session</p>
+			<div class="font-weight-bolder mt-5"> <p style="font-size:30px"> RP. <?= $package->price ?>/Session</p>
 			<table class="futura-content tableDataService text-center w-100 mt-5">
 				<tr class="w-100">
-					<td class="w-100" style="font-size:1.4rem"><?= $package->service1 ?></td>
+					<td class="w-100" style="font-size:1.2rem"><?= $package->service1 ?></td>
 				</tr>
 				<tr class="w-100">
-					<td class="w-100" style="font-size:1.4rem"><?= $package->service2 ?></td>
+					<td class="w-100" style="font-size:1.2rem"><?= $package->service2 ?></td>
 				</tr>
 				<tr class="w-100">
-					<td class="w-100" style="font-size:1.4rem"><?= $package->service3 ?></td>
+					<td class="w-100" style="font-size:1.2rem"><?= $package->service3 ?></td>
 				</tr>
 				<tr class="w-100">
-					<td class="w-100" style="font-size:1.4rem"><?= $package->service4 ?></td>
+					<td class="w-100" style="font-size:1.2rem"><?= $package->service4 ?></td>
 				</tr>
 			</table>
 			</div>
